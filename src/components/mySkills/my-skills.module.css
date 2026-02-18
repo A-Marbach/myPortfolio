@@ -1,0 +1,234 @@
+.mySkills {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+  background-color: #262E34;
+}
+
+.mySkills h1 {
+  font-size: 60px;
+  text-align: start;
+  color: white;
+  margin: 0;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.skillGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  width: 100%;
+  max-width: 1420px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* --------------------- */
+/* 3D Flip Card Styles   */
+/* --------------------- */
+
+.skillCard {
+  width: 100%;
+  max-width: 376px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.cardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.skillCard:hover .cardInner {
+  transform: rotateY(180deg);
+}
+
+.cardFront,
+.cardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardFront {
+  background-color: #313E47;
+}
+
+.cardFront img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.cardBack {
+  background-color: #5b6870;
+  color: #e5e7eb;
+  transform: rotateY(180deg);
+  padding: 10px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hoverTextContent h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.hoverTextContent ul {
+  margin: 0;
+  padding-left: 1rem;
+  list-style-type: disc;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* --------------------- */
+/* Responsive Anpassungen */
+/* --------------------- */
+@media (max-width: 1024px) {
+  .skillGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skillGrid {
+    display: none;
+    /* Desktop ausblenden */
+  }
+
+
+  .mobileSkillContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #253445;
+    border-radius: 12px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    /* Jede Gruppe untereinander */
+    gap: 16px;
+    width: 100%;
+  }
+
+  /* Neue Wrapper-Klasse für 3 Skills zusammen */
+  .skillCardMobileGroup {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 15px;
+    padding: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .skillCardMobile {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #FFFFFF;
+  }
+
+  .skillCardMobile img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .skillText h3 {
+    font-size: 14px;
+    color: #FFFFFF;
+    margin: 0 0 4px 0;
+  }
+
+  .skillText ul {
+    font-size: 12px;
+    color: #FFFFFF;
+    padding-left: 16px;
+    margin: 0;
+  }
+
+  .skillText ul li {
+    color: #FFFFFF;
+  }
+
+  /* Mobile Pagination */
+  .paginationDots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
+    width: 100%;
+  }
+
+  .dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #68727E;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+
+  .activeDot {
+    background-color: #ffffff;
+    transform: scale(1.4);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .mobileSkillContent {
+    width: 90%;           /* 90% Breite des Bildschirms */
+    margin-left: 5%;      /* 5% Abstand links */
+    margin-right: 5%;     /* 5% Abstand rechts */
+  }
+
+  .mySkills{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .skillCardMobile {
+    gap: 6px;             /* Etwas enger */
+  }
+
+  .skillCardMobile img {
+    width: 50px;          /* Icons kleiner */
+    height: 50px;
+  }
+
+  .skillText h3 {
+    font-size: 12px;      /* Überschrift kleiner */
+  }
+
+  .skillText ul {
+    font-size: 10px;      /* Liste kleiner */
+    padding-left: 12px;   /* etwas enger */
+  }
+
+  .skillText ul li {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,87 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+  background-color: #262E34;
+  box-sizing: border-box;
+  padding-bottom: 100px;
+}
+
+.arrowContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.arrowLink {
+    display: inline-block;
+    background-color: #3a4148;          /* dunkler Standard-Hintergrund */
+    transition: background-color 0.3s;  /* sanfter Übergang */
+}
+
+
+
+.arrowLink img {
+    display: block;
+    width: 40px;
+    height: 100px;
+    transition: 0.3s;
+}
+
+.arrowLink:hover img {
+    content: url("./Arrow-up-hover.png"); /* anderes Bild beim Hover */
+}
+
+.routeArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.copyRight {
+    color: #FFFFFF;
+}
+
+.routeLink {
+    font-family: Quicksand;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: #F8F5EC;
+}
+
+/* Responsive */
+@media screen and (max-width: 700px) {
+    .arrowLink img {
+        width: 36px;
+        height: 90px;
+    }
+
+    .copyRight {
+        font-size: 28px;
+    }
+
+    .routeArea {
+        margin-bottom: 55px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .arrowLink img {
+        width: 32px;
+        height: 80px;
+    }
+
+    .copyRight {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 1421px) {
+    .footer {
+        padding: 64px max(80px, calc(50% - 710px));
+    }
+}

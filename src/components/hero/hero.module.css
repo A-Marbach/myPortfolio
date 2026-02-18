@@ -1,0 +1,132 @@
+.hero {
+  display: flex;
+  justify-content: left;
+  padding-left: 100px; 
+  padding-right: 100px;
+  gap: 2rem; 
+  background-color: #266AD9;
+  color: white;
+  padding-bottom: 48px;
+}
+
+.heroText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 70%; 
+  padding-top: 48px;
+}
+
+.heroText h1 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.heroText h2 {
+  font-size: 68px;
+  margin: 0.5rem 0;
+}
+
+.heroText h3 {
+  font-size: 28px;
+  margin: 0.5rem 0;
+}
+
+.heroBodyMobile {
+  display: none; 
+}
+
+.heroText p {
+  padding-top: 24px;
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0;
+  text-align: left;
+  max-width: 600px;
+}
+
+button{
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  color: #266AD9;
+  font-size: 24px;
+  margin-top: 48px;
+  background-color: #FFFFFF;
+}
+
+button:hover{
+  cursor: pointer;
+  background-color: #DEE0E0;
+}
+
+.heroImage {
+  width: 30%; /* Rechte Spalte 30% */
+  position: relative;
+}
+
+.myPhoto {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; 
+  object-fit: cover; 
+  z-index: 2;
+  position: relative;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 24px;
+    align-items: center;
+  }
+
+  /* Desktop-Text ausblenden */
+  .heroBody {
+    display: none;
+  }
+
+  /* Mobile-Text einblenden */
+  .heroBodyMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .heroBodyMobile p {
+    margin: 0;
+  }
+
+  /* Bild zentrieren */
+  .heroImage {
+    width: 220px;
+    max-width: 80%;
+    margin: 16px 0;
+  }
+
+  .myPhoto {
+    border-radius: 12px;
+  }
+
+ h1,h3{
+  text-align: start;
+ }
+
+
+
+  .heroText h2 {
+    font-size: 42px;
+  }
+
+  button {
+    margin: 14px;
+  }
+
+  .heroText {
+    width: 100%;
+    padding-top: 0;
+  }
+}

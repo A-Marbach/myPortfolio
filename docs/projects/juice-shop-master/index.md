@@ -28,21 +28,21 @@ This repository contains the documentation of three selected Juice Shop challeng
 - **Category:** Broken Access Control  
 - **Description:** A publicly accessible `/ftp` directory allowed access to internal markdown files without authentication.  
 - **Documentation:**  
-  → [challenges/Broken_Access_Control](./challenges/Broken_Access_Control/README.md)
+  → [challenges/Broken_Access_Control](./challenges/Broken_Access_Control)
 - Directory Browsing (/ftp): https://www.loom.com/share/16de980d25f94615bd2851370d9391b4
 
 ### 2. Stored XSS via Manipulated Registration Request
 - **Category:** Cross-Site Scripting (Stored XSS)  
 - **Description:** By modifying the registration request in Burp Suite, a payload was stored in the database and executed in the admin interface.  
 - **Documentation:**  
-  → [challenges/XSS_Attack](./challenges/XSS_Attack/README.md)
+  → [challenges/XSS_Attack](./challenges/XSS_Attack)
 - Stored XSS Registration: https://www.loom.com/share/82ef9b217feb4caa86a8898663e18473
 
 ### 3. SQL Injection – Login Admin
 - **Category:** Injection (SQLi)  
 - **Description:** Using a classic `' OR 1=1--` payload, authentication was bypassed and the admin account was accessed.  
 - **Documentation:**  
-  → [challenges/SQL_Injection](./challenges/SQL_Injection/README.md)
+  → [challenges/SQL_Injection](./challenges/SQL_Injection)
 - SQL Injection Admin Login: https://www.loom.com/share/93c07f839b944ddab61468c8c4fedf09
 
 ## Challenge Videos
@@ -50,6 +50,5 @@ Each challenge includes a short walkthrough video (max. 5 minutes) demonstrating
 - How the vulnerability works  
 - How the exploit is performed  
 - Why the vulnerability is dangerous  
-
 
 

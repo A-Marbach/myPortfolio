@@ -1,0 +1,110 @@
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #262E34;
+}
+
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1420px;
+  width: 100%;
+  padding: 32px 120px;
+  text-align: start;
+}
+
+.contentArea {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.bulletList {
+  list-style-type: circle;
+  padding-left: 20px;
+  margin-top: 16px;
+  flex: 1;
+  min-width: 400px;
+  color: #FFFFFF;
+}
+
+.bulletList li {
+  color: #FFFFFF;
+}
+
+.heading {
+  width: 100%;
+  font-size: 64px;
+  font-weight: 700;
+  font-family: Quicksand;
+  color: #FFFFFF;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  padding: 16px 0;
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.infoRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.link {
+  color: #FFFFFF;
+  font-size: 18px;
+  font-family: Quicksand;
+  font-weight: 500;
+}
+
+.link:hover {
+  color: #FFFFFF;
+}
+
+.iconImg {
+  width: 32px;       /* Größe der Icons */
+  height: 32px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1230px) {
+  .heading {
+    font-size: 36px;
+  }
+
+  .contentArea {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .bulletList {
+    min-width: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .heading {
+    font-size: 24px;
+  }
+
+  .wrapper {
+    padding: 0 10px;
+  }
+
+  .link {
+    font-size: 16px;
+  }
+}
