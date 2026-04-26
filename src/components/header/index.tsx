@@ -1,8 +1,6 @@
 import styles from './header.module.css';
 import { useState } from 'react';
-import menuIcon from './menu-icon.png';
-import menuIconHover from './menu-icon-hover.png';
-import closeIcon from './close.png';
+
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -46,7 +44,7 @@ export default function Header() {
         onMouseLeave={() => setHover(false)}
       >
         <img
-          src={mobileOpen ? closeIcon : hover ? menuIconHover : menuIcon}
+          src={mobileOpen ? "img/close.png" : hover ? "img/menu-icon-hover.png" : "img/menu-icon.png"}
           alt={mobileOpen ? "Close Menu" : "Open Menu"}
         />
       </div>

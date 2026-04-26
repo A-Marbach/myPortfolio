@@ -1,29 +1,77 @@
 import { useState } from 'react';
 import styles from './my-project-highlights.module.css';
-import project1 from './conduit.png';
-import project2 from './truck_signs_api.png';
-import project3 from './Minecraft.png';
-import project4 from './wordpress.png';
-import project5 from './Baby_Tools.png';
-import yaml from './yaml.png';
-import python from './python.png';
-import shell from './shell.png';
-import container from './container.png';
-import itSecurity from './security.png';
-import cd from './cicd.png';
-import seeMore from './see-more.png';
-import seeMoreHover from './see-more-hover.png';
+
 
 export default function MyProjectHighlights() {
   const projects = [
-    { img: project1, title: "Conduit", description: "Deployment einer Multi-Container-Anwendung mit Backend (Django) und Frontend (Angular). Zeigt Containerisierung und CI/CD-Pipelines. Fokus liegt auf stabiler Infrastruktur, automatisierten Deployments und DevOps-Praktiken.", techIcons: [container, yaml, shell, itSecurity, cd], github: "https://github.com/A-Marbach/conduit-container", doc: "/my-dso-blog/docs/projects/conduit-container" },
-    { img: project2, title: "Truck Signs API", description: "Deployment einer API inklusive Datenbank auf einer virtuellen Maschine. Projekt demonstriert Containerisierung, Setup einer stabilen Infrastruktur auf eigener VM, Datenbankintegration und Grundzüge der Automatisierung.", techIcons: [container, shell, yaml, itSecurity], github: "https://github.com/A-Marbach/truck_signs_api", doc: "/my-dso-blog/docs/projects/truck-signs-api" },
-    { img: project3, title: "Minecraft Project", description: "Ein leichtgewichtiges, containerisiertes Setup zum Ausführen eines Minecraft-Java-Edition-Servers mit Docker und Docker Compose.", techIcons: [container, yaml, shell, itSecurity], github: "https://github.com/A-Marbach/minecraft-server", doc: "/my-dso-blog/docs/projects/minecraft-server" },
-    { img: project4, title: "WordPress-Blog", description: "Ein Docker-Compose-Setup, das WordPress mit einer MySQL-Datenbank bereitstellt – mit persistenten Daten, konfigurierbaren Umgebungsvariablen und einfachem Deployment.", techIcons: [container, yaml, shell, itSecurity], github: "https://github.com/A-Marbach/wordpress", doc: "/my-dso-blog/docs/projects/wordpress-blog" },
-    { img: project5, title: "Baby-Tools-Shop", description: "Deployment eines containerisierten Django-E-Commerce-Shops mit PostgreSQL, sicherer Konfiguration via Umgebungsvariablen und Verwaltung über das Admin-Panel.", techIcons: [container, shell, itSecurity], github: "https://github.com/A-Marbach/baby-tools-shop", doc: "/my-dso-blog/docs/projects/baby-tools-shop" },
+    {
+      img: "img/conduit.png",
+      title: "Conduit",
+      description:
+        "Deployment einer Multi-Container-Anwendung mit Backend (Django) und Frontend (Angular). Zeigt Containerisierung und CI/CD-Pipelines. Fokus liegt auf stabiler Infrastruktur, automatisierten Deployments und DevOps-Praktiken.",
+      techIcons: [
+        "img/container.png",
+        "img/yaml.png",
+        "img/shell.png",
+        "img/security.png",
+        "img/cicd.png"
+      ],
+      github: "https://github.com/A-Marbach/conduit-container",
+      doc: "/my-dso-blog/docs/projects/conduit-container"
+    },
+    {
+      img: "img/truck_signs_api.png",
+      title: "Truck Signs API",
+      description: "Deployment einer API inklusive Datenbank auf einer virtuellen Maschine. Projekt demonstriert Containerisierung, Setup einer stabilen Infrastruktur auf eigener VM, Datenbankintegration und Grundzüge der Automatisierung.",
+      techIcons: [
+        "img/container.png",
+        "img/shell.png",
+        "img/yaml.png",
+        "img/security.png"
+      ],
+      github: "https://github.com/A-Marbach/truck_signs_api",
+      doc: "/my-dso-blog/docs/projects/truck-signs-api"
+    },
+    {
+      img: "img/Minecraft.png",
+      title: "Minecraft Project",
+      description: "Ein leichtgewichtiges, containerisiertes Setup zum Ausführen eines Minecraft-Java-Edition-Servers mit Docker und Docker Compose.",
+      techIcons: [
+        "img/container.png",
+        "img/yaml.png",
+        "img/shell.png",
+        "img/security.png"
+      ],
+      github: "https://github.com/A-Marbach/minecraft-server",
+      doc: "/my-dso-blog/docs/projects/minecraft-server"
+    },
+    {
+      img: "img/wordpress.png",
+      title: "WordPress-Blog",
+      description: "Ein Docker-Compose-Setup, das WordPress mit einer MySQL-Datenbank bereitstellt – mit persistenten Daten, konfigurierbaren Umgebungsvariablen und einfachem Deployment.",
+      techIcons: [
+        "img/container.png",
+        "img/yaml.png",
+        "img/shell.png",
+        "img/security.png"
+      ],
+      github: "https://github.com/A-Marbach/wordpress",
+      doc: "/my-dso-blog/docs/projects/wordpress-blog"
+    },
+    {
+      img: "img/Baby_Tools.png",
+      title: "Baby-Tools-Shop",
+      description: "Deployment eines containerisierten Django-E-Commerce-Shops mit PostgreSQL, sicherer Konfiguration via Umgebungsvariablen und Verwaltung über das Admin-Panel.",
+      techIcons: [
+        "img/container.png",
+        "img/shell.png",
+        "img/security.png"],
+      github: "https://github.com/A-Marbach/baby-tools-shop",
+      doc: "/my-dso-blog/docs/projects/baby-tools-shop"
+    },
 
   ];
-
+  const [isHovered, setIsHovered] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
@@ -44,8 +92,22 @@ export default function MyProjectHighlights() {
 
             </div>
           ))}
-          <div className={styles.seeMoreWrapper}>
-            <img src={seeMore} alt="See more projects" className={styles.seeMoreImage} />
+          <div
+            className={styles.seeMoreWrapper}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <a
+              href="https://github.com/A-Marbach?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={isHovered ? "img/see-more-hover.png" : "img/see-more.png"}
+                alt="See more projects"
+                className={styles.seeMoreImage}
+              />
+            </a>
           </div>
         </div>
         <div className={styles.projectCardWrapper}>

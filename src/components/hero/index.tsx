@@ -1,6 +1,4 @@
 import styles from './hero.module.css';
-import myPhoto from './my_photo.png';
-import behindPhoto from './behind_the_picture.png';
 
 export default function Hero() {
   return (
@@ -17,20 +15,40 @@ export default function Hero() {
             Ich unterstütze Unternehmen dabei, ihre IT-Infrastruktur sicher, effizient und skalierbar zu gestalten.
             Mit Fokus auf Automatisierung, Cloud-Lösungen und IT-Security sorge ich für zuverlässige und performante Systeme.
           </p>
-          <button>Contact me</button>
+          <button
+            onClick={() => {
+              document.getElementById("contact")?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            Contact me
+          </button>
         </div>
       </div>
 
       <div className={styles.heroImage}>
-        <img className={styles.myPhoto} src={myPhoto} alt="Artur Marbach" />
+        <img
+          className={styles.myPhoto}
+          src="img/profile.png"
+          alt="Artur Marbach"
+        />
       </div>
       <div className={styles.heroBodyMobile}>
-          <p>
-            Ich unterstütze Unternehmen dabei, ihre IT-Infrastruktur sicher, effizient und skalierbar zu gestalten.
-            Mit Fokus auf Automatisierung, Cloud-Lösungen und IT-Security sorge ich für zuverlässige und performante Systeme.
-          </p>
-          <button>Contact me</button>
-        </div>
+        <p>
+          Ich unterstütze Unternehmen dabei, ihre IT-Infrastruktur sicher, effizient und skalierbar zu gestalten.
+          Mit Fokus auf Automatisierung, Cloud-Lösungen und IT-Security sorge ich für zuverlässige und performante Systeme.
+        </p>
+        <button
+          onClick={() => {
+            document.getElementById("contact")?.scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
+        >
+          Contact me
+        </button>
+      </div>
     </section>
   );
 }

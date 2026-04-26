@@ -92,9 +92,7 @@
   transition: 0.3s;
 }
 
-.seeMoreWrapper:hover .seeMoreImage {
-  content: url('./see-more-hover.png'); /* Bild beim Hover ändern */
-}
+
 
 
 

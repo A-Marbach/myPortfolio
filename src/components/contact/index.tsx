@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import styles from "./contact.module.css";
 
-import mailIcon from "./mail.png";
-import mailHover from "./mail-hover.png";
-import linkedinIcon from "./linkin.png";
-import linkedinHover from "./linkin-hover.png";
+
 
 export default function AddressSection() {
   const [hoverMail, setHoverMail] = useState(false);
@@ -26,7 +23,7 @@ export default function AddressSection() {
             {/* Mail */}
             <div className={styles.infoRow}>
               <img
-                src={hoverMail ? mailHover : mailIcon}
+                src={hoverMail ? "img/mail-hover.png" : "img/mail.png"}
                 alt="mail"
                 onMouseEnter={() => setHoverMail(true)}
                 onMouseLeave={() => setHoverMail(false)}
@@ -37,10 +34,10 @@ export default function AddressSection() {
               </a>
             </div>
 
-           
+
             <div className={styles.infoRow}>
               <img
-                src={hoverLinkedIn ? linkedinHover : linkedinIcon}
+                src={hoverLinkedIn ? "img/linkin-hover.png" : "img/linkin.png"}
                 alt="linkedin"
                 onMouseEnter={() => setHoverLinkedIn(true)}
                 onMouseLeave={() => setHoverLinkedIn(false)}

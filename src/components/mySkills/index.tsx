@@ -1,29 +1,19 @@
 import React, { useState, useEffect } from "react";
 import styles from './my-skills.module.css';
-import skill1 from './html.png';
-import skill2 from './css.png';
-import skill3 from './docu.png';
-import skill4 from './python.png';
-import skill5 from './Shell_scripting.png';
-import skill6 from './yaml.png';
-import skill7 from './docker_container.png';
-import skill8 from './CD.png';
-import skill9 from './it_security.png';
-import active from './active-point.png';
-import inActive from './inactive-point.png';
+
 
 
 export default function MySkills() {
   const skills = [
-    { img: skill1, title: "HTML", description: ["Erstellung semantischer Webseiten", "Strukturierung von Inhalten", "Barrierefreie Layouts"] },
-    { img: skill2, title: "CSS", description: ["Design responsiver Layouts", "Flexbox & Grid Anwendungen", "Animations- und Styling-Effekte"] },
-    { img: skill3, title: "Docusaurus", description: ["Dokumentations-Websites erstellen", "Markdown-Inhalte integrieren", "Theming und Anpassungen"] },
-    { img: skill4, title: "Python", description: ["Automatisierung von Abläufen", "Skripting für DevOps-Prozesse", "Datenanalyse und Tools"] },
-    { img: skill5, title: "Shell Scripting", description: ["Automatisierte Systemaufgaben", "Batch- und Cron-Jobs erstellen", "Systemadministration optimieren"] },
-    { img: skill6, title: "YAML", description: ["Konfiguration von Services", "CI/CD Pipelines definieren", "Deployment-Templates erstellen"] },
-    { img: skill7, title: "Docker", description: ["Containerisierung von Anwendungen", "Erstellung von Dockerfiles", "Image-Management & Registry"] },
-    { img: skill8, title: "CI/CD", description: ["Automatisierte Build-Pipelines", "Test- und Deployment-Prozesse", "Integration mit GitHub/GitLab"] },
-    { img: skill9, title: "IT-Security", description: ["Sicherheitsüberprüfungen durchführen", "Penetration Tests planen", "Best Practices & Compliance"] },
+    { img: "img/html-skill.png", title: "HTML", description: ["Erstellung semantischer Webseiten", "Strukturierung von Inhalten", "Barrierefreie Layouts"] },
+    { img: "img/css-skill.png", title: "CSS", description: ["Design responsiver Layouts", "Flexbox & Grid Anwendungen", "Animations- und Styling-Effekte"] },
+    { img: "img/docusaurus.png", title: "Docusaurus", description: ["Dokumentations-Websites erstellen", "Markdown-Inhalte integrieren", "Theming und Anpassungen"] },
+    { img: "img/python.png", title: "Python", description: ["Automatisierung von Abläufen", "Skripting für DevOps-Prozesse", "Datenanalyse und Tools"] },
+    { img: "img/Shell_scripting.png", title: "Shell Scripting", description: ["Automatisierte Systemaufgaben", "Batch- und Cron-Jobs erstellen", "Systemadministration optimieren"] },
+    { img: "img/yaml-skill.png", title: "YAML", description: ["Konfiguration von Services", "CI/CD Pipelines definieren", "Deployment-Templates erstellen"] },
+    { img: "img/docker_container.png", title: "Docker", description: ["Containerisierung von Anwendungen", "Erstellung von Dockerfiles", "Image-Management & Registry"] },
+    { img: "img/CD.png", title: "CI/CD", description: ["Automatisierte Build-Pipelines", "Test- und Deployment-Prozesse", "Integration mit GitHub/GitLab"] },
+    { img: "img/it_security.png", title: "IT-Security", description: ["Sicherheitsüberprüfungen durchführen", "Penetration Tests planen", "Best Practices & Compliance"] },
   ];
 
   const [isMobile, setIsMobile] = useState(false);
@@ -94,7 +84,7 @@ export default function MySkills() {
             {Array.from({ length: totalPages }).map((_, pageIndex) => (
               <img
                 key={pageIndex}
-                src={currentIndex / skillsPerPage === pageIndex ? active : inActive}
+                src={currentIndex / skillsPerPage === pageIndex ? "img/active-point.png" : "img/inactive-point.png"}
                 alt={`page-${pageIndex + 1}`}
                 className={styles.paginationImage}
                 onClick={() => goToPage(pageIndex)}
