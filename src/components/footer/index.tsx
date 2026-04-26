@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./footer.module.css";
 import arrowUp from "./Arrow-up.png";
 import arrowUpHover from "./Arrow-up-hover.png";
-
+import Link from "@docusaurus/Link";
 
 
 export default function Footer() {
@@ -27,9 +27,9 @@ export default function Footer() {
       <div className={styles.routeArea}>
         <span className={styles.copyRight}>© Artur Marbach</span>
 
-        <a href="/imprint" className={styles.routeLink}>
+        <Link to="/imprint" className={styles.routeLink}>
           Legal Notice
-        </a>
+        </Link>
       </div>
     </footer>
   );
