@@ -8,7 +8,7 @@ export default function MyProjectHighlights() {
       img: "img/conduit.png",
       title: "Conduit",
       description:
-        "Deployment einer Multi-Container-Anwendung mit Backend (Django) und Frontend (Angular). Zeigt Containerisierung und CI/CD-Pipelines. Fokus liegt auf stabiler Infrastruktur, automatisierten Deployments und DevOps-Praktiken.",
+        "Deployment of a multi-container application with a backend (Django) and frontend (Angular). Demonstrates containerization and CI/CD pipelines. Focus on stable infrastructure, automated deployments, and DevOps practices.",
       techIcons: [
         "img/container.png",
         "img/yaml.png",
@@ -22,7 +22,7 @@ export default function MyProjectHighlights() {
     {
       img: "img/truck_signs_api.png",
       title: "Truck Signs API",
-      description: "Deployment einer API inklusive Datenbank auf einer virtuellen Maschine. Projekt demonstriert Containerisierung, Setup einer stabilen Infrastruktur auf eigener VM, Datenbankintegration und Grundzüge der Automatisierung.",
+      description: "Deployment of an API including a database on a virtual machine. The project demonstrates containerization, setup of a stable infrastructure on a custom VM, database integration, and fundamentals of automation.",
       techIcons: [
         "img/container.png",
         "img/shell.png",
@@ -35,7 +35,7 @@ export default function MyProjectHighlights() {
     {
       img: "img/Minecraft.png",
       title: "Minecraft Project",
-      description: "Ein leichtgewichtiges, containerisiertes Setup zum Ausführen eines Minecraft-Java-Edition-Servers mit Docker und Docker Compose.",
+      description: "A lightweight, containerized setup for running a Minecraft Java Edition server with Docker and Docker Compose.",
       techIcons: [
         "img/container.png",
         "img/yaml.png",
@@ -48,7 +48,7 @@ export default function MyProjectHighlights() {
     {
       img: "img/wordpress.png",
       title: "WordPress-Blog",
-      description: "Ein Docker-Compose-Setup, das WordPress mit einer MySQL-Datenbank bereitstellt – mit persistenten Daten, konfigurierbaren Umgebungsvariablen und einfachem Deployment.",
+      description: "A Docker-Compose setup that deploys WordPress with a MySQL database – with persistent data, configurable environment variables, and simple deployment.",
       techIcons: [
         "img/container.png",
         "img/yaml.png",
@@ -61,7 +61,7 @@ export default function MyProjectHighlights() {
     {
       img: "img/Baby_Tools.png",
       title: "Baby-Tools-Shop",
-      description: "Deployment eines containerisierten Django-E-Commerce-Shops mit PostgreSQL, sicherer Konfiguration via Umgebungsvariablen und Verwaltung über das Admin-Panel.",
+      description: "Deployment of a containerized Django E-Commerce shop with PostgreSQL, secure configuration via environment variables, and management through the admin panel.",
       techIcons: [
         "img/container.png",
         "img/shell.png",

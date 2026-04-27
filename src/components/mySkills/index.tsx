@@ -5,15 +5,15 @@ import styles from './my-skills.module.css';
 
 export default function MySkills() {
   const skills = [
-    { img: "img/html-skill.png", title: "HTML", description: ["Erstellung semantischer Webseiten", "Strukturierung von Inhalten", "Barrierefreie Layouts"] },
-    { img: "img/css-skill.png", title: "CSS", description: ["Design responsiver Layouts", "Flexbox & Grid Anwendungen", "Animations- und Styling-Effekte"] },
-    { img: "img/docusaurus.png", title: "Docusaurus", description: ["Dokumentations-Websites erstellen", "Markdown-Inhalte integrieren", "Theming und Anpassungen"] },
-    { img: "img/python.png", title: "Python", description: ["Automatisierung von Abläufen", "Skripting für DevOps-Prozesse", "Datenanalyse und Tools"] },
-    { img: "img/Shell_scripting.png", title: "Shell Scripting", description: ["Automatisierte Systemaufgaben", "Batch- und Cron-Jobs erstellen", "Systemadministration optimieren"] },
-    { img: "img/yaml-skill.png", title: "YAML", description: ["Konfiguration von Services", "CI/CD Pipelines definieren", "Deployment-Templates erstellen"] },
-    { img: "img/docker_container.png", title: "Docker", description: ["Containerisierung von Anwendungen", "Erstellung von Dockerfiles", "Image-Management & Registry"] },
-    { img: "img/CD.png", title: "CI/CD", description: ["Automatisierte Build-Pipelines", "Test- und Deployment-Prozesse", "Integration mit GitHub/GitLab"] },
-    { img: "img/it_security.png", title: "IT-Security", description: ["Sicherheitsüberprüfungen durchführen", "Penetration Tests planen", "Best Practices & Compliance"] },
+    { img: "img/html-skill.png", title: "HTML", description: ["Creating semantic websites", "Structuring content", "Accessible layouts"] },
+    { img: "img/css-skill.png", title: "CSS", description: ["Designing responsive layouts", "Flexbox & Grid usage", "Animations and styling effects"] },
+    { img: "img/docusaurus.png", title: "Docusaurus", description: ["Creating documentation websites", "Integrating Markdown content", "Theming and customizations"] },
+    { img: "img/python.png", title: "Python", description: ["Automating processes", "Scripting for DevOps workflows", "Data analysis and tools"] },
+    { img: "img/Shell_scripting.png", title: "Shell Scripting", description: ["Automating system tasks", "Creating batch and cron jobs", "Optimizing system administration"] },
+    { img: "img/yaml-skill.png", title: "YAML", description: ["Configuring services", "Defining CI/CD pipelines", "Creating deployment templates"] },
+    { img: "img/docker_container.png", title: "Docker", description: ["Containerizing applications", "Creating Dockerfiles", "Image management & registry"] },
+    { img: "img/CD.png", title: "CI/CD", description: ["Automated Build-Pipelines", "Test- and Deployment-Processes", "Integration with GitHub/GitLab"] },
+    { img: "img/it_security.png", title: "IT-Security", description: ["Conducting security checks", "lanning penetration tests", "Best practices & compliance"] },
   ];
 
   const [isMobile, setIsMobile] = useState(false);

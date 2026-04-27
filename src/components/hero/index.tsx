@@ -12,8 +12,8 @@ export default function Hero() {
 
         <div className={styles.heroBody}>
           <p>
-            Ich unterstütze Unternehmen dabei, ihre IT-Infrastruktur sicher, effizient und skalierbar zu gestalten.
-            Mit Fokus auf Automatisierung, Cloud-Lösungen und IT-Security sorge ich für zuverlässige und performante Systeme.
+            I support companies in designing their IT infrastructure in a secure, efficient, and scalable way.
+            With a focus on automation, cloud solutions, and IT security, I ensure reliable and high-performance systems.
           </p>
           <button
             onClick={() => {
@@ -36,8 +36,8 @@ export default function Hero() {
       </div>
       <div className={styles.heroBodyMobile}>
         <p>
-          Ich unterstütze Unternehmen dabei, ihre IT-Infrastruktur sicher, effizient und skalierbar zu gestalten.
-          Mit Fokus auf Automatisierung, Cloud-Lösungen und IT-Security sorge ich für zuverlässige und performante Systeme.
+          I support companies in designing their IT infrastructure in a secure, efficient, and scalable way.
+          With a focus on automation, cloud solutions, and IT security, I ensure reliable and high-performance systems.
         </p>
         <button
           onClick={() => {
