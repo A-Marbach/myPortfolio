@@ -11,7 +11,7 @@ const blogEnabled = Boolean(process.env.BLOG_ENABLED === 'true')
 const config: Config = {
   title: 'Portfolio of Artur Marbach',
   tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
 
   // Set the production url of your site here
   url: process.env.DEPLOYMENT_URL ?? "https://a-marbach.github.io",
