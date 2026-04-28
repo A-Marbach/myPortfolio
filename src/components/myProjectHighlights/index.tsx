@@ -8,7 +8,7 @@ export default function MyProjectHighlights() {
       img: "img/conduit.png",
       title: "Conduit",
       description:
-        "Multi-container app with Django backend and Angular frontend. Containerized with CI/CD pipelines, automated deployments, and stable infrastructure.",
+        "Containerized a full-stack Django + Angular application, built automated CI/CD pipelines for zero-touch deployments, and enforced infrastructure stability through scripted configuration management.",
       techIcons: [
         "img/container.png",
         "img/yaml.png",
@@ -22,7 +22,7 @@ export default function MyProjectHighlights() {
     {
       img: "img/truck_signs_api.png",
       title: "Truck Signs API",
-      description: "Deployment of an API including a database on a virtual machine. The project demonstrates containerization, setup of a stable infrastructure on a custom VM, database integration, and fundamentals of automation.",
+      description: "Deployed a production-ready REST API with containerized database on a self-managed VM — covering infrastructure provisioning, container orchestration, secure DB integration, and shell-scripted automation.",
       techIcons: [
         "img/container.png",
         "img/shell.png",
@@ -35,7 +35,7 @@ export default function MyProjectHighlights() {
     {
       img: "img/Minecraft.png",
       title: "Minecraft Project",
-      description: "A lightweight, containerized setup for running a Minecraft Java Edition server with Docker and Docker Compose.",
+      description: "Provisioned a containerized game server with Docker Compose, focusing on resource isolation, persistent volume management, and a fully reproducible infrastructure-as-code setup.",
       techIcons: [
         "img/container.png",
         "img/yaml.png",
@@ -48,7 +48,7 @@ export default function MyProjectHighlights() {
     {
       img: "img/wordpress.png",
       title: "WordPress-Blog",
-      description: "A Docker-Compose setup that deploys WordPress with a MySQL database – with persistent data, configurable environment variables, and simple deployment.",
+      description: "Orchestrated a multi-service WordPress + MySQL stack with Docker Compose — featuring persistent data volumes, environment-based secret management, and a single-command deployment workflow.",
       techIcons: [
         "img/container.png",
         "img/yaml.png",
@@ -61,7 +61,7 @@ export default function MyProjectHighlights() {
     {
       img: "img/Baby_Tools.png",
       title: "Baby-Tools-Shop",
-      description: "Deployment of a containerized Django E-Commerce shop with PostgreSQL, secure configuration via environment variables, and management through the admin panel.",
+      description: "Deployed a containerized Django e-commerce app backed by PostgreSQL — security-hardened via environment variables, with isolated networking and production-ready container management.",
       techIcons: [
         "img/container.png",
         "img/shell.png",

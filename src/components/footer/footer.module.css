@@ -54,6 +54,7 @@
 
 .routeLink:hover {
   text-decoration: underline;
+  color: white;
 }
 
 /* Responsive */
