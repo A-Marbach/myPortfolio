@@ -9,8 +9,8 @@ dotenvconfig();
 const blogEnabled = Boolean(process.env.BLOG_ENABLED === 'true')
 
 const config: Config = {
-  title: 'Portfolio of Artur Marbach',
-  tagline: 'Dinosaurs are cool',
+  title: 'Artur Marbach',
+  tagline: 'DevSecOps Engineer — secure by design and automated.',
   favicon: 'img/favicon.svg',
 
   // Set the production url of your site here
@@ -82,9 +82,9 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'Artur Marbach',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Artur Marbach Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -114,29 +114,12 @@ const config: Config = {
           ],
         },
         {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
+          title: 'Connect',
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            }
+              href: 'https://github.com/A-Marbach',
+            },
           ],
         },
       ],
