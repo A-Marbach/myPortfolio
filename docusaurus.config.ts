@@ -9,7 +9,7 @@ dotenvconfig();
 const blogEnabled = Boolean(process.env.BLOG_ENABLED === 'true')
 
 const config: Config = {
-  title: 'DSO Live Demo Docs',
+  title: 'Portfolio of Artur Marbach',
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
@@ -166,8 +166,9 @@ const config: Config = {
 
 
 if (blogEnabled) {
-  (config.themeConfig.navbar as any).items.push({to: '/blog', label: 'Blog', position: 'left'});
-  (config.themeConfig.footer as any).links[2].items.push({to: '/blog', label: 'Blog'});
+  const themeConfig = config.themeConfig!;
+  (themeConfig.navbar as any).items.push({to: '/blog', label: 'Blog', position: 'left'});
+  (themeConfig.footer as any).links[2].items.push({to: '/blog', label: 'Blog'});
 }
 
 export default config;
