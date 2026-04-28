@@ -55,7 +55,8 @@
   max-width: 400px;
 }
 
-button {
+.heroText button,
+.heroBodyMobile button {
   padding: 12px;
   border-radius: 20px;
   border: none;
@@ -65,14 +66,14 @@ button {
   background-color: #FFFFFF;
 }
 
-button:hover {
+.heroText button:hover,
+.heroBodyMobile button:hover {
   cursor: pointer;
   background-color: #DEE0E0;
 }
 
 .heroImage {
   width: 380px;
-  /* Rechte Spalte 30% */
   position: relative;
 }
 
@@ -89,36 +90,33 @@ button:hover {
   .heroText {
     width: 50%;
   }
-   .myPhoto {
+  .myPhoto {
     height: 478px;
     object-fit: scale-down;
   }
-  h2{
-    font-size: 48px!important;
+  .heroText h2 {
+    font-size: 48px;
   }
-  
 }
 
 @media (max-width: 1200px) {
-  p{
-    font-size: 16px!important;
+  .heroText p,
+  .heroBodyMobile p {
+    font-size: 16px;
   }
-
-  h2{
-    font-size: 36px!important;
+  .heroText h2 {
+    font-size: 36px;
   }
-   h3{
-    font-size: 20px!important;
+  .heroText h3 {
+    font-size: 20px;
   }
 }
+
 @media (max-width: 950px) {
   .wrapper {
     padding: 32px 80px;
   }
 }
-
-
-
 
 /* Mobile */
 @media (max-width: 768px) {
@@ -132,14 +130,16 @@ button:hover {
     align-items: center;
     justify-content: flex-start;
     padding: 16px;
-    gap: 0;        /* füllt genau den Viewport */
+    gap: 0;
   }
 
-  h2{
-    margin: 0!important;
+  .heroText h2 {
+    margin: 0;
+    font-size: 42px;
   }
-   h3{
-    margin: 0!important;
+
+  .heroText h3 {
+    margin: 0;
   }
 
   .heroText {
@@ -149,7 +149,7 @@ button:hover {
   }
 
   .heroImage {
-    width: 250px;       /* ein tick größer als 200px */
+    width: 250px;
     flex-shrink: 0;
     margin: 0 auto;
     order: 2;
@@ -175,16 +175,13 @@ button:hover {
     display: none;
   }
 
-  .heroText h2 {
-    font-size: 42px;
-  }
-
-  p{
-    text-align: start!important;
+  .heroText p,
+  .heroBodyMobile p {
+    text-align: start;
     margin: 0;
   }
-  button {
+
+  .heroBodyMobile button {
     margin: 14px;
   }
 }
-
