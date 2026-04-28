@@ -1,44 +1,41 @@
-# My Developer Blog
+# DevSecOps Portfolio – Artur Marbach
 
-This project is a developer blog built with [Docusaurus](https://docusaurus.io/), a modern static site generator.
+A personal portfolio and documentation site built with [Docusaurus](https://docusaurus.io/) and React, showcasing DevSecOps projects, infrastructure work, and technical documentation.
+
+**Live site:** [a-marbach.github.io/my-dso-blog](https://a-marbach.github.io/my-dso-blog/)
 
 ---
 
 ## Table of Contents
-- [Repository Description](#repository-description)
+- [About](#about)
 - [Quickstart](#quickstart)
 - [Usage](#usage)
 - [Repository Structure](#repository-structure)
 - [CI/CD](#cicd)
 - [Deployment](#deployment)
-  - [GitHub Pages](#github-pages)
-  - [NGINX Deployment](#nginx-deployment)
 
 ---
 
-## Repository Description
+## About
 
-This repository contains a developer portfolio and blog built with Docusaurus and React components.
+This repository contains a DevSecOps portfolio built with Docusaurus and custom React components.
 
 It demonstrates:
-- Static site generation
-- Component-based frontend architecture
+- Static site generation with Docusaurus v3
+- Component-based frontend architecture with React + TypeScript
 - Project showcase section with interactive UI
-- CI/CD deployment via GitHub Actions
-- Deployment to GitHub Pages and optionally NGINX
+- CI/CD pipeline via GitHub Actions
+- Deployment to GitHub Pages
 
 ---
-
-
 
 ## Quickstart
 
 ### Requirements
-* Node.js (>= 16)
-* npm
+- Node.js >= 18
+- npm
 
 ### Install dependencies
-
 ```bash
 npm install
 ```
@@ -48,38 +45,22 @@ npm install
 npm run start
 ```
 
-### The site will be available at:
-```bash
-http://localhost:3000
-```
+Site is available at `http://localhost:3000`
 
-### Build project
+### Build for production
 ```bash
 npm run build
 ```
-This generates a static production build in the /build folder.
+
+Generates a static build in the `/build` folder.
+
 ---
 
 ## Usage
 
-### Adding a new blog post
-
-Create a new Markdown file inside `/blog`:
-
-```md
----
-title: My New Post
-date: 2026-04-26
----
-```
-
-Your content here...
-
 ### Adding a new project
-Edit:
-src/components/myProjectHighlights/index.tsx
 
-### Add a new object inside the projects array:
+Edit [src/components/myProjectHighlights/index.tsx](src/components/myProjectHighlights/index.tsx) and add a new object to the `projects` array:
 
 ```ts
 {
@@ -92,62 +73,84 @@ src/components/myProjectHighlights/index.tsx
 }
 ```
 
+### Adding a new documentation page
+
+Create a Markdown file inside `/docs` and reference it in `sidebars.ts`.
+
+### Adding a new blog post
+
+Create a Markdown file inside `/blog`:
+
+```md
+---
+title: My New Post
+date: 2024-01-01
+---
+
+Your content here...
+```
+
 ### Modifying UI components
-All UI components are located in:
-src/components/
-Each component has:
 
-* index.tsx → logic
-* *.module.css → styling
+All components are in `src/components/`. Each has:
+- `index.tsx` — logic and markup
+- `*.module.css` — scoped styles
 
-### Repository Structure
-* blog/ → blog posts (Markdown)
-* docs/ → documentation pages
-* src/ → React components (UI)
-* static/ → static assets (images, icons)
-* docusaurus.config.ts → main configuration
-* sidebars.ts → sidebar structure
-* build/ → production output (generated)
+---
 
-### CI/CD
+## Repository Structure
 
-This project uses GitHub Actions for automation:
+```
+blog/                  → blog posts (Markdown)
+docs/                  → documentation pages
+src/
+  components/          → React UI components
+  pages/               → custom pages (home, imprint)
+  css/                 → global styles
+static/                → images and icons
+docusaurus.config.ts   → main configuration
+sidebars.ts            → sidebar structure
+.github/workflows/     → CI/CD pipelines
+```
 
-* Build project on every push
-* Run production build
-* Deploy automatically to GitHub Pages
+---
 
-Workflow includes:
+## CI/CD
 
-* dependency installation
-* build step (npm run build)
-* artifact upload
-* deployment to GitHub Pages
+GitHub Actions handles the full pipeline on every push to `feature`:
 
-### Deployment
-GitHub Pages
+1. Install dependencies
+2. Build the site (`npm run build`)
+3. Upload build artifact
+4. Deploy to GitHub Pages
 
-To deploy manually:
+Workflow files are in [.github/workflows/](.github/workflows/).
+
+---
+
+## Deployment
+
+### GitHub Pages (automatic)
+
+Push to the `feature` branch — GitHub Actions deploys automatically.
+
+### GitHub Pages (manual)
+
 ```bash
 npm run build
 npm run deploy
 ```
-Or via GitHub Actions (recommended), which automatically deploys on push to the main branch.
 
-### NGINX Deployment
+### NGINX
 
-
-The project can also be deployed using Docker + NGINX.
-
-Steps:
-1. Build project:
+1. Build the project:
 ```bash
 npm run build
 ```
 
-2. Copy /build folder to server
-3. Configure NGINX:
-```
+2. Copy the `/build` folder to your server and configure NGINX:
+
+```nginx
 server {
   listen 80;
   server_name your-domain.com;
@@ -160,6 +163,10 @@ server {
   }
 }
 ```
+
+---
+
 ## Notes
-* Do NOT store secrets or tokens in the repository
-* Use environment variables for sensitive data
+
+- Do not store secrets or tokens in the repository
+- Use environment variables for sensitive configuration (see `example.env`)
