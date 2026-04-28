@@ -3,15 +3,15 @@ import styles from './my-skills.module.css';
 
 export default function MySkills() {
   const skills = [
-    { img: "img/html-skill.png", title: "HTML", description: ["Creating semantic websites", "Structuring content", "Accessible layouts"] },
-    { img: "img/css-skill.png", title: "CSS", description: ["Designing responsive layouts", "Flexbox & Grid usage", "Animations and styling effects"] },
-    { img: "img/docusaurus.png", title: "Docusaurus", description: ["Creating documentation websites", "Integrating Markdown content", "Theming and customizations"] },
-    { img: "img/python.png", title: "Python", description: ["Automating processes", "Scripting for DevOps workflows", "Data analysis and tools"] },
-    { img: "img/Shell_scripting.png", title: "Shell Scripting", description: ["Automating system tasks", "Creating batch and cron jobs", "Optimizing system administration"] },
-    { img: "img/yaml-skill.png", title: "YAML", description: ["Configuring services", "Defining CI/CD pipelines", "Creating deployment templates"] },
-    { img: "img/docker_container.png", title: "Docker", description: ["Containerizing applications", "Creating Dockerfiles", "Image management & registry"] },
-    { img: "img/CD.png", title: "CI/CD", description: ["Automated Build-Pipelines", "Test- and Deployment-Processes", "Integration with GitHub/GitLab"] },
-    { img: "img/it_security.png", title: "IT-Security", description: ["Conducting security checks", "Planning penetration tests", "Best practices & compliance"] },
+    { img: "img/html.svg", title: "HTML", description: ["Creating semantic websites", "Structuring content", "Accessible layouts"] },
+    { img: "img/css.svg", title: "CSS", description: ["Designing responsive layouts", "Flexbox & Grid usage", "Animations and styling effects"] },
+    { img: "img/docusaurus.svg", title: "Docusaurus", description: ["Creating documentation websites", "Integrating Markdown content", "Theming and customizations"] },
+    { img: "img/python.svg", title: "Python", description: ["Automating processes", "Scripting for DevOps workflows", "Data analysis and tools"] },
+    { img: "img/shell.svg", title: "Shell Scripting", description: ["Automating system tasks", "Creating batch and cron jobs", "Optimizing system administration"] },
+    { img: "img/yaml.svg", title: "YAML", description: ["Configuring services", "Defining CI/CD pipelines", "Creating deployment templates"] },
+    { img: "img/docker.svg", title: "Docker", description: ["Containerizing applications", "Creating Dockerfiles", "Image management & registry"] },
+    { img: "img/cicd.svg", title: "CI/CD", description: ["Automated Build-Pipelines", "Test- and Deployment-Processes", "Integration with GitHub/GitLab"] },
+    { img: "img/security.svg", title: "IT-Security", description: ["Conducting security checks", "Planning penetration tests", "Best practices & compliance"] },
   ];
   const [activePage, setActivePage] = useState(0);
 
