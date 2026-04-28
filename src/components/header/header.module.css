@@ -111,7 +111,6 @@
     display: block;
   }
   .header {
-    padding: 64px;
-    position: relative;
+    height: 64px;
   }
 }
