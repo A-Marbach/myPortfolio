@@ -1,17 +1,36 @@
+
+
 .myProjectHighlights {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  width: 100%;
   background-color: #266AD9;
   color: #e5e7eb;
-  padding: 80px 0;
 }
 
 .projectsContainer {
   display: flex;
   justify-content: space-between;
-  padding-left: 100px;
-  padding-right: 100px;
   gap: 40px;
   margin-top: 40px;
+}
+
+.wrapper {
+  max-width: 1420px;
+  width: 100%;
+  padding: 32px 120px;       /* gleicher Wert wie in contact.module.css */
+  text-align: start;      /* statt text-align: center auf section */
+}
+
+.myProjectHighlights h1 {
+  font-size: 60px;
+  text-align: start;
+  color: white;
+  margin: 0;
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 
 .projectList {
@@ -136,7 +155,10 @@
 }
 
 .githubBtn:hover {
-  background-color: #6a7070;
+  background-color: #4a5568;
+  color: #e5e7eb;
+  text-decoration: none;
+
 }
 
 .docBtn {
@@ -150,6 +172,8 @@
 
 .docBtn:hover {
   background-color: #4c80d4;
+  color: white;
+  text-decoration: none;
 }
 
 .projectResponsive {
@@ -158,19 +182,70 @@
 }
 
 
+@media (max-width: 950px) {
+  .wrapper {
+    padding: 32px 80px;
+  }
+}
+
+@media (max-width: 1350px) {
+ 
+
+  .projectCardWrapper {
+    max-width: 650px;
+  }
+
+  .projectsContainer {
+    gap: 32px;
+  }
+
+  .projectListItem {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 1000px) {
+ 
+
+  .projectCardWrapper {
+    max-width: 500px;
+  }
+
+  .projectListItem {
+    font-size: 15px;
+  }
+
+  .techIcons img {
+    height: 28px;
+  }
+}
+
 /* Mobile <768px */
 @media (max-width: 767px) {
+  .wrapper {
+    padding: 16px;
+  }
+
+  .subtitle {
+    display: none;
+  }
+
   .projectsContainer {
     display: none;
   }
   
+
+  .seeMoreWrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
 
   .projectResponsive {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 0 5%;
     gap: 20px;
     box-sizing: border-box; 
     background-color: #266AD9;
@@ -202,12 +277,46 @@
     background-color: #262E34;
   }
 
+  .respTitle {
+    font-size: 26px !important;
+    margin: 0;
+    color: #fff;
+  }
+
   .respImage {
-    width: 80%;        /* Bild auf 80% der Container-Breite */
-    max-width: 300px;  /* max. Breite für größere Smartphones */
-    height: auto;      /* Höhe proportional */
+    width: 95%;
+    max-width: 420px;
+    height: auto;
     border-radius: 12px;
-    margin: 0 auto;    /* zentriert das Bild */
+    margin: 0 auto;
+  }
+
+  .respButtons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 4px;
+  }
+
+  .respButtonLight {
+    padding: 8px 16px;
+    border-radius: 10px;
+    background-color: #266AD9;
+    color: white;
+    font-weight: 600;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+  .respButtonOutline {
+    padding: 8px 16px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    font-size: 15px;
+    cursor: pointer;
   }
 }
 

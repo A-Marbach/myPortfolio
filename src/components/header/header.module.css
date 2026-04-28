@@ -1,15 +1,30 @@
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 24px 100px;
   background-color: #266AD9;
   color: white;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 100;
+  width: 100%;
+  z-index: 300;
+  transition: transform 0.3s ease;
+  will-change: transform;
+  padding-bottom: 0!important;
 }
 
+.headerHidden {
+  transform: translate3d(0, -100%, 0);
+}
+
+.wrapper {
+  display: flex;
+  max-width: 1420px;
+  width: 100%;
+  padding: 0 120px;
+  padding-top: 30px;
+  text-align: start;
+}
 .navList {
   display: flex;
   gap: 1.5rem;
@@ -81,6 +96,12 @@
   text-decoration: none;
 }
 
+@media (max-width: 950px) {
+  .wrapper {
+    padding: 0 80px;
+  }
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
   .nav {
@@ -90,7 +111,7 @@
     display: block;
   }
   .header {
-    padding: 24px;
+    padding: 64px;
     position: relative;
   }
 }

@@ -1,59 +1,71 @@
 import React from "react";
 import Link from "@docusaurus/Link";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
 import styles from "./style.module.css";
 
 export default function Imprint() {
   return (
-    <main className={styles.container}>
-      <h1 className={styles.title}>Legal Notice (Imprint)</h1>
+    <>
+      <Header />
+      <main>
+        <section className={styles.hero}>
+          <div className={styles.heroWrapper}>
+            <p className={styles.heroSub}>Information according to German § 5 TMG</p>
+            <h1 className={styles.heroTitle}>Legal Notice</h1>
+          </div>
+        </section>
 
-      <p className={styles.subtext}>
-        Information according to German § 5 TMG
-      </p>
+        <section className={styles.content}>
+          <div className={styles.wrapper}>
+            <Link to="/" className={styles.backLink}>← Back to Home</Link>
 
-      <Link to="/" className={styles.backLink}>
-        ← Back to Home
-      </Link>
+            <div className={styles.grid}>
+              <div className={styles.card}>
+                <h2 className={styles.cardTitle}>Responsible Person</h2>
+                <p className={styles.cardText}>
+                  <strong>Artur Marbach</strong><br />
+                  Straßburger Stieg 5<br />
+                  22049 Hamburg<br />
+                  Germany
+                </p>
+              </div>
 
-      <section className={styles.card}>
-        <h2>Responsible Person</h2>
-        <p>
-          <strong>Artur Marbach</strong><br />
-          Straßburger Stieg 5<br />
-          22049 Hamburg<br />
-          Germany
-        </p>
-      </section>
+              <div className={styles.card}>
+                <h2 className={styles.cardTitle}>Contact</h2>
+                <p className={styles.cardText}>
+                  Email:{" "}
+                  <a href="mailto:mail@artur-marbach.de" className={styles.cardLink}>
+                    mail@artur-marbach.de
+                  </a>
+                </p>
+              </div>
 
-      <section className={styles.card}>
-        <h2>Contact</h2>
-        <p>
-          Email:{" "}
-          <a href="mailto:mail@artur-marbach.de">
-            mail@artur-marbach.de
-          </a>
-        </p>
-      </section>
+              <div className={styles.card}>
+                <h2 className={styles.cardTitle}>Responsible for Content</h2>
+                <p className={styles.cardText}>
+                  § 55 Abs. 2 RStV<br /><br />
+                  Artur Marbach<br />
+                  Straßburger Stieg 5<br />
+                  22049 Hamburg
+                </p>
+              </div>
 
-      <section className={styles.card}>
-        <h2>Responsible for Content (§ 55 Abs. 2 RStV)</h2>
-        <p>
-          Artur Marbach<br />
-          Straßburger Stieg 5<br />
-          22049 Hamburg
-        </p>
-      </section>
-
-      <section className={styles.card}>
-        <h2>Disclaimer</h2>
-        <p>
-          The contents of this website have been created with the greatest possible care.
-          However, we do not guarantee the accuracy, completeness, or timeliness of the content.
-        </p>
-        <p>
-          We assume no liability for external links. Operators are responsible for their content.
-        </p>
-      </section>
-    </main>
+              <div className={styles.card}>
+                <h2 className={styles.cardTitle}>Disclaimer</h2>
+                <p className={styles.cardText}>
+                  The contents of this website have been created with the greatest possible care.
+                  However, we do not guarantee the accuracy, completeness, or timeliness of the content.
+                </p>
+                <p className={styles.cardText}>
+                  We assume no liability for external links. Operators are responsible for their content.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
   );
 }

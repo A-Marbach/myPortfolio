@@ -3,6 +3,8 @@ import styles from './hero.module.css';
 export default function Hero() {
   return (
     <section id="about-me" className={styles.hero}>
+      <div className={styles.wrapper}>
+
       <div className={styles.heroText}>
         <div className={styles.heroIntro}>
           <h1>Hey there. I am</h1>
@@ -12,8 +14,7 @@ export default function Hero() {
 
         <div className={styles.heroBody}>
           <p>
-            I support companies in designing their IT infrastructure in a secure, efficient, and scalable way.
-            With a focus on automation, cloud solutions, and IT security, I ensure reliable and high-performance systems.
+            I build IT infrastructure that is secure by design — automated, cloud-native, and ready to scale.
           </p>
           <button
             onClick={() => {
@@ -36,8 +37,7 @@ export default function Hero() {
       </div>
       <div className={styles.heroBodyMobile}>
         <p>
-          I support companies in designing their IT infrastructure in a secure, efficient, and scalable way.
-          With a focus on automation, cloud solutions, and IT security, I ensure reliable and high-performance systems.
+          I build IT infrastructure that is secure by design — automated, cloud-native, and ready to scale.
         </p>
         <button
           onClick={() => {
@@ -48,6 +48,7 @@ export default function Hero() {
         >
           Contact me
         </button>
+      </div>
       </div>
     </section>
   );

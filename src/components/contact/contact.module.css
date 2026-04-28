@@ -85,13 +85,20 @@
     font-size: 36px;
   }
 
-  .contentArea {
-    flex-direction: column;
-    gap: 20px;
-  }
+  
 
   .bulletList {
     min-width: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding: 16px;
+  }
+  .contentArea {
+    flex-direction: column;
+    gap: 20px;
   }
 }
 

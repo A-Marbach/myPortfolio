@@ -8,7 +8,7 @@ export default function MyProjectHighlights() {
       img: "img/conduit.png",
       title: "Conduit",
       description:
-        "Deployment of a multi-container application with a backend (Django) and frontend (Angular). Demonstrates containerization and CI/CD pipelines. Focus on stable infrastructure, automated deployments, and DevOps practices.",
+        "Multi-container app with Django backend and Angular frontend. Containerized with CI/CD pipelines, automated deployments, and stable infrastructure.",
       techIcons: [
         "img/container.png",
         "img/yaml.png",
@@ -76,27 +76,92 @@ export default function MyProjectHighlights() {
 
   return (
     <section id="my-projects" className={styles.myProjectHighlights}>
-      <h2>My Project Highlights</h2>
-      <p>Here are some of my project highlights.</p>
+      <div className={styles.wrapper}>
+        <h1>My Project Highlights</h1>
+        <p className={styles.subtitle}>Here are some of my project highlights.</p>
 
-      {/* Desktop */}
-      <div className={styles.projectsContainer}>
-        <div className={styles.projectList}>
-          {projects.map((project, index) => (
+        {/* Desktop */}
+        <div className={styles.projectsContainer}>
+          <div className={styles.projectList}>
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className={`${styles.projectListItem} ${activeIndex === index ? styles.activeItem : ''}`}
+                onClick={() => setActiveIndex(index)}
+              >
+                <span className={styles.projectNumber}>{index + 1}.</span> {project.title}
+
+              </div>
+            ))}
             <div
-              key={index}
-              className={`${styles.projectListItem} ${activeIndex === index ? styles.activeItem : ''}`}
-              onClick={() => setActiveIndex(index)}
+              className={styles.seeMoreWrapper}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
             >
-              <span className={styles.projectNumber}>{index + 1}.</span> {project.title}
+              <a
+                href="https://github.com/A-Marbach?tab=repositories"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={isHovered ? "img/see-more-hover.png" : "img/see-more.png"}
+                  alt="See more projects"
+                  className={styles.seeMoreImage}
+                />
+              </a>
+            </div>
+          </div>
+          <div className={styles.projectCardWrapper}>
+            <div className={styles.projectCard}>
+              <div className={styles.leftColumn}>
+                <h2 className={styles.projectTitle}>{projects[activeIndex].title}</h2>
 
+                <img src={projects[activeIndex].img} alt={projects[activeIndex].title} className={styles.projectImage} />
+              </div>
+              <div className={styles.rightColumn}>
+                {projects[activeIndex].techIcons.length > 0 && (
+                  <div className={styles.techIcons}>
+                    {projects[activeIndex].techIcons.map((icon, idx) => (
+                      <img key={idx} src={icon} alt="Tech icon" />
+                    ))}
+                  </div>
+                )}
+                <p className={styles.projectDescription}>{projects[activeIndex].description}</p>
+                <div className={styles.buttons}>
+                  <a href={projects[activeIndex].doc} target="_blank" rel="noopener noreferrer" className={styles.docBtn}>Documentation</a>
+                  <a href={projects[activeIndex].github} target="_blank" rel="noopener noreferrer" className={styles.githubBtn}>GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Responsive */}
+        <div className={styles.projectResponsive}>
+          {projects.map((project, index) => (
+            <div key={index} className={styles.respCard}>
+              <h3 className={styles.respTitle}>{index + 1}. {project.title}</h3>
+              {project.techIcons.length > 0 && (
+                <div className={styles.respTags}>
+                  {project.techIcons.map((icon, idx) => (
+                    <img key={idx} src={icon} alt="Tech icon" className={styles.respTagIcon} />
+                  ))}
+                </div>
+              )}
+              <img src={project.img} alt={project.title} className={styles.respImage} />
+              <p className={styles.respDescription}>{project.description}</p>
+              <div className={styles.respButtons}>
+                <a href={project.doc} target="_blank" rel="noreferrer">
+                  <button className={styles.respButtonLight}>Documentation</button>
+                </a>
+                <a href={project.github} target="_blank" rel="noreferrer">
+                  <button className={styles.respButtonOutline}>GitHub</button>
+                </a>
+              </div>
             </div>
           ))}
-          <div
-            className={styles.seeMoreWrapper}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
+
+          <div className={styles.seeMoreWrapper}>
             <a
               href="https://github.com/A-Marbach?tab=repositories"
               target="_blank"
@@ -106,59 +171,12 @@ export default function MyProjectHighlights() {
                 src={isHovered ? "img/see-more-hover.png" : "img/see-more.png"}
                 alt="See more projects"
                 className={styles.seeMoreImage}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
               />
             </a>
           </div>
         </div>
-        <div className={styles.projectCardWrapper}>
-          <div className={styles.projectCard}>
-            <div className={styles.leftColumn}>
-              <h3 className={styles.projectTitle}>{projects[activeIndex].title}</h3>
-
-              <img src={projects[activeIndex].img} alt={projects[activeIndex].title} className={styles.projectImage} />
-            </div>
-            <div className={styles.rightColumn}>
-              {projects[activeIndex].techIcons.length > 0 && (
-                <div className={styles.techIcons}>
-                  {projects[activeIndex].techIcons.map((icon, idx) => (
-                    <img key={idx} src={icon} alt="Tech icon" />
-                  ))}
-                </div>
-              )}
-              <p className={styles.projectDescription}>{projects[activeIndex].description}</p>
-              <div className={styles.buttons}>
-                <a href={projects[activeIndex].doc} target="_blank" rel="noopener noreferrer" className={styles.docBtn}>Documentation</a>
-                <a href={projects[activeIndex].github} target="_blank" rel="noopener noreferrer" className={styles.githubBtn}>GitHub</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Responsive */}
-      <div className={styles.projectResponsive}>
-        {projects.map((project, index) => (
-          <div key={index} className={styles.respCard}>
-            <h3 className={styles.respTitle}>{index + 1}. {project.title}</h3>
-            {project.techIcons.length > 0 && (
-              <div className={styles.respTags}>
-                {project.techIcons.map((icon, idx) => (
-                  <img key={idx} src={icon} alt="Tech icon" className={styles.respTagIcon} />
-                ))}
-              </div>
-            )}
-            <img src={project.img} alt={project.title} className={styles.respImage} />
-            <p className={styles.respDescription}>{project.description}</p>
-            <div className={styles.respButtons}>
-              <a href={project.doc} target="_blank" rel="noreferrer">
-                <button className={styles.respButtonLight}>Documentation</button>
-              </a>
-              <a href={project.github} target="_blank" rel="noreferrer">
-                <button className={styles.respButtonOutline}>GitHub</button>
-              </a>
-            </div>
-          </div>
-        ))}
       </div>
     </section>
   );
