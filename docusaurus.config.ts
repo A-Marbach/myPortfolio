@@ -17,12 +17,12 @@ const config: Config = {
   url: process.env.DEPLOYMENT_URL ?? "https://a-marbach.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: process.env.BASE_URL ?? "/my-dso-blog/",
+  baseUrl: process.env.BASE_URL ?? "/myPortfolio/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: process.env.GITHUB_ORG ?? "A-Marbach", // Usually your GitHub org/user name.
-  projectName: process.env.GITHUB_PROJECT ?? "my-dso-blog", // Usually your repo name.
+  projectName: process.env.GITHUB_PROJECT ?? "myPortfolio", // Usually your repo name.
 
   deploymentBranch: process.env.DEPLOYMENT_BRANCH ?? "feature",
 
@@ -46,7 +46,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/A-Marbach/my-dso-blog',
+            'https://github.com/A-Marbach/myPortfolio',
         },
         blog: blogEnabled ? 
           {
@@ -58,7 +58,7 @@ const config: Config = {
             // Please change this to your repo.
             // Remove this to remove the "edit this page" links.
             editUrl:
-              'https://github.com/A-Marbach/my-dso-blog',
+              'https://github.com/A-Marbach/myPortfolio',
             // Useful options to enforce blogging best practices
             onInlineTags: 'warn',
             onInlineAuthors: 'warn',
@@ -95,7 +95,7 @@ const config: Config = {
           label: 'Docs',
         },
         {
-          href: 'https://github.com/A-Marbach/my-dso-blog',
+          href: 'https://github.com/A-Marbach/myPortfolio',
           label: 'Github',
           position: 'right',
         },
