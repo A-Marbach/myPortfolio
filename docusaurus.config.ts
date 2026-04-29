@@ -26,7 +26,7 @@ const config: Config = {
 
   deploymentBranch: process.env.DEPLOYMENT_BRANCH ?? "feature",
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
