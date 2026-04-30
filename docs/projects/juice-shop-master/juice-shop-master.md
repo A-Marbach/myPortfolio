@@ -8,11 +8,15 @@ This project documents the analysis and exploitation of several security vulnera
 All findings and demonstrations are conducted strictly for educational and research purposes only.
 
 ## Table of Contents
-- [Project Overview](#project-overview)
-- [Quickstart](#quickstart)
-- [Challenge Documentation](#challenge-documentation)
-- [Challenge Videos](#challenge-videos)
-- [Security Notice](#security-notice)
+- [Juice Shop Master](#juice-shop-master)
+  - [Table of Contents](#table-of-contents)
+  - [Project Overview](#project-overview)
+  - [Quickstart](#quickstart)
+  - [Challenge Documentation](#challenge-documentation)
+    - [1. Unauthorized Access via Directory Browsing (/ftp)](#1-unauthorized-access-via-directory-browsing-ftp)
+    - [2. Stored XSS via Manipulated Registration Request](#2-stored-xss-via-manipulated-registration-request)
+    - [3. SQL Injection – Login Admin](#3-sql-injection--login-admin)
+  - [Challenge Videos](#challenge-videos)
 
 ## Project Overview
 This repository contains the documentation of three selected Juice Shop challenges, each demonstrating a different type of vulnerability.

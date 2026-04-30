@@ -1,3 +1,7 @@
+---
+sidebar_label: "XSS Attack"
+---
+
 > ⚠️ **Security Notice**  
 > This project is strictly for educational and research purposes.  
 > No real personal data, credentials, or sensitive information were used.  
