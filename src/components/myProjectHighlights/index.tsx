@@ -17,7 +17,7 @@ export default function MyProjectHighlights() {
         "img/cicd.png"
       ],
       github: "https://github.com/A-Marbach/conduit-container",
-      doc: "/my-dso-blog/docs/projects/conduit-container"
+      doc: "/myPortfolio/docs/projects/conduit-container"
     },
     {
       img: "img/truck_signs_api.png",
@@ -30,7 +30,7 @@ export default function MyProjectHighlights() {
         "img/security.png"
       ],
       github: "https://github.com/A-Marbach/truck_signs_api",
-      doc: "/my-dso-blog/docs/projects/truck-signs-api"
+      doc: "/myPortfolio/docs/projects/truck-signs-api"
     },
     {
       img: "img/Minecraft.png",
@@ -43,7 +43,7 @@ export default function MyProjectHighlights() {
         "img/security.png"
       ],
       github: "https://github.com/A-Marbach/minecraft-server",
-      doc: "/my-dso-blog/docs/projects/minecraft-server"
+      doc: "/myPortfolio/docs/projects/minecraft-server"
     },
     {
       img: "img/wordpress.png",
@@ -56,7 +56,7 @@ export default function MyProjectHighlights() {
         "img/security.png"
       ],
       github: "https://github.com/A-Marbach/wordpress",
-      doc: "/my-dso-blog/docs/projects/wordpress-blog"
+      doc: "/myPortfolio/docs/projects/wordpress-blog"
     },
     {
       img: "img/Baby_Tools.png",
@@ -67,7 +67,7 @@ export default function MyProjectHighlights() {
         "img/shell.png",
         "img/security.png"],
       github: "https://github.com/A-Marbach/baby-tools-shop",
-      doc: "/my-dso-blog/docs/projects/baby-tools-shop"
+      doc: "/myPortfolio/docs/projects/baby-tools-shop"
     },
 
   ];
@@ -99,7 +99,7 @@ export default function MyProjectHighlights() {
               onMouseLeave={() => setIsHovered(false)}
             >
               <a
-                href="https://github.com/A-Marbach?tab=repositories"
+                href="https://a-marbach.github.io/myPortfolio/docs/projects/overview/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
