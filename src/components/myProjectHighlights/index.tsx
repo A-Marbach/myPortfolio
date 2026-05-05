@@ -30,7 +30,7 @@ export default function MyProjectHighlights() {
         "img/security.png",
         "img/cicd.png"
       ],
-      github: "https://github.com/A-Marbach/da-bubble",
+      github: "https://github.com/A-Marbach/daBubble",
       doc: "/myPortfolio/docs/projects/da-bubble"
     },
     {
