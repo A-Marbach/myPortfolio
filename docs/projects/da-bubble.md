@@ -221,7 +221,6 @@ Store these in GitHub repository settings under Settings → Secrets and variabl
 ---
 
 ## Extras
-
 - Can be extended with voice/video communication features
 - Role-based permissions and channel management possible
 - Notification system for real-time updates
