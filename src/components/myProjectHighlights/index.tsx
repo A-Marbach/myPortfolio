@@ -6,7 +6,7 @@ export default function MyProjectHighlights() {
   const projects = [
     {
       img: "img/conduit.png",
-      title: "Conduit",
+      title: "Conduit-Container",
       description:
         "Containerized a full-stack Django + Angular application, built automated CI/CD pipelines for zero-touch deployments, and enforced infrastructure stability through scripted configuration management.",
       techIcons: [
@@ -19,10 +19,24 @@ export default function MyProjectHighlights() {
       github: "https://github.com/A-Marbach/conduit-container",
       doc: "/myPortfolio/docs/projects/conduit-container"
     },
+     {
+      img: "img/da-bubble.png",
+      imgRadius: "36px",
+      title: "Da-Bubble",
+      description: "Containerized an Angular chat application and deployed it via a fully automated CI/CD pipeline — including Docker builds, GHCR image registry, CodeQL security scanning, SSH-based VM deployment, and Kubernetes orchestration with minikube.",
+      techIcons: [
+        "img/container.png",
+        "img/yaml.png",
+        "img/security.png",
+        "img/cicd.png"
+      ],
+      github: "https://github.com/A-Marbach/da-bubble",
+      doc: "/myPortfolio/docs/projects/da-bubble"
+    },
     {
       img: "img/truck_signs_api.png",
       title: "Truck Signs API",
-      description: "Deployed a production-ready REST API with containerized database on a self-managed VM — covering infrastructure provisioning, container orchestration, secure DB integration, and shell-scripted automation.",
+      description: "Deployed a containerized REST API with PostgreSQL on a self-managed VM — featuring Docker networking, environment-based configuration, and automated deployment scripts.",
       techIcons: [
         "img/container.png",
         "img/shell.png",
@@ -32,19 +46,7 @@ export default function MyProjectHighlights() {
       github: "https://github.com/A-Marbach/truck_signs_api",
       doc: "/myPortfolio/docs/projects/truck-signs-api"
     },
-    {
-      img: "img/Minecraft.png",
-      title: "Minecraft Project",
-      description: "Provisioned a containerized game server with Docker Compose, focusing on resource isolation, persistent volume management, and a fully reproducible infrastructure-as-code setup.",
-      techIcons: [
-        "img/container.png",
-        "img/yaml.png",
-        "img/shell.png",
-        "img/security.png"
-      ],
-      github: "https://github.com/A-Marbach/minecraft-server",
-      doc: "/myPortfolio/docs/projects/minecraft-server"
-    },
+   
     {
       img: "img/wordpress.png",
       title: "WordPress-Blog",
@@ -116,7 +118,7 @@ export default function MyProjectHighlights() {
               <div className={styles.leftColumn}>
                 <h2 className={styles.projectTitle}>{projects[activeIndex].title}</h2>
 
-                <img src={projects[activeIndex].img} alt={projects[activeIndex].title} className={styles.projectImage} />
+                <img src={projects[activeIndex].img} alt={projects[activeIndex].title} className={styles.projectImage} style={projects[activeIndex].imgRadius ? { borderRadius: projects[activeIndex].imgRadius } : {}} />
               </div>
               <div className={styles.rightColumn}>
                 {projects[activeIndex].techIcons.length > 0 && (
@@ -148,7 +150,7 @@ export default function MyProjectHighlights() {
                   ))}
                 </div>
               )}
-              <img src={project.img} alt={project.title} className={styles.respImage} />
+              <img src={project.img} alt={project.title} className={styles.respImage} style={project.imgRadius ? { borderRadius: project.imgRadius } : {}} />
               <p className={styles.respDescription}>{project.description}</p>
               <div className={styles.respButtons}>
                 <a href={project.doc} target="_blank" rel="noreferrer">
