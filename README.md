@@ -2,7 +2,7 @@
 
 A personal portfolio and documentation site built with [Docusaurus](https://docusaurus.io/) and React, showcasing DevSecOps projects, infrastructure work, and technical documentation.
 
-**Live site:** [a-marbach.github.io/my-dso-blog](https://a-marbach.github.io/my-dso-blog/)
+**Live site:** [a-marbach.github.io/myPortfolio](https://a-marbach.github.io/myPortfolio/)
 
 ---
 
