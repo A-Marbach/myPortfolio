@@ -4,6 +4,19 @@ import styles from './my-project-highlights.module.css';
 
 export default function MyProjectHighlights() {
   const projects = [
+    
+    {
+      img: "img/bookstore-api.jpg",
+      title: "Book-Store API",
+      description: "Built a containerized ASP.NET Core 8 REST API with MongoDB — featuring a multi-stage Dockerfile, automated CI/CD pipeline with Hadolint, Trivy and Gitleaks security scanning, and live monitoring via Prometheus and Grafana on a Hetzner VM.",
+      techIcons: [
+        "img/container.png",
+        "img/shell.png",
+        "img/cicd.png",
+        "img/security.png"],
+      github: "https://github.com/A-Marbach/bookStoreAPI",
+      doc: "/myPortfolio/docs/projects/bookstore-api"
+    },
     {
       img: "img/conduit.png",
       title: "Conduit-Container",
@@ -60,17 +73,7 @@ export default function MyProjectHighlights() {
       github: "https://github.com/A-Marbach/wordpress",
       doc: "/myPortfolio/docs/projects/wordpress-blog"
     },
-    {
-      img: "img/Baby_Tools.png",
-      title: "Baby-Tools-Shop",
-      description: "Deployed a containerized Django e-commerce app backed by PostgreSQL — security-hardened via environment variables, with isolated networking and production-ready container management.",
-      techIcons: [
-        "img/container.png",
-        "img/shell.png",
-        "img/security.png"],
-      github: "https://github.com/A-Marbach/baby-tools-shop",
-      doc: "/myPortfolio/docs/projects/baby-tools-shop"
-    },
+    
 
   ];
   const [isHovered, setIsHovered] = useState(false);
