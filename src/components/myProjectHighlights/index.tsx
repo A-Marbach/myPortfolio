@@ -84,7 +84,7 @@ export default function MyProjectHighlights() {
     <section id="my-projects" className={styles.myProjectHighlights}>
       <div className={styles.wrapper}>
         <h1>My Project Highlights</h1>
-        <p className={styles.subtitle}>Each project was containerized, automated with CI/CD pipelines, and deployed using Docker or Docker Compose — from development to production.</p>
+        <p className={styles.subtitle}>I build and operate Linux-based infrastructure using Docker, CI/CD pipelines, monitoring, and automation.</p>
 
         {/* Desktop */}
         <div className={styles.projectsContainer}>
