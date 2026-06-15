@@ -13,6 +13,7 @@ export default function MyProjectHighlights() {
         "img/container.png",
         "img/shell.png",
         "img/cicd.png",
+        "img/yaml.png",
         "img/security.png"],
       github: "https://github.com/A-Marbach/bookStoreAPI",
       doc: "/myPortfolio/docs/projects/bookstore-api"

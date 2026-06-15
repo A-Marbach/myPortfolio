@@ -14,9 +14,9 @@ export default function AddressSection() {
 
         <div className={styles.contentArea}>
           <ul className={styles.bulletList}>
-            <li>I am DevSecOps Engineer</li>
-            <li>Automate workflows and deployments</li>
-            <li>Bridge gap between development and operations</li>
+            <li>I am an IT Operations and DevOps Enthusiast</li>
+            <li>Interested in Linux Administration, IT Operations, Infrastructure Automation, Monitoring, and DevOps.</li>
+            <li>Based in Hamburg and open to opportunities in IT Operations, Linux Administration, System Administration, and Junior DevOps.</li>
           </ul>
 
           <div className={styles.infoBox}>

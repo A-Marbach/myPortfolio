@@ -9,12 +9,12 @@ export default function Hero() {
         <div className={styles.heroIntro}>
           <h1>Hey there, I am</h1>
           <h2>Artur Marbach</h2>
-          <h3>DevSecOps Engineer</h3>
+          <h3>IT Operations | Linux Administration | DevOps</h3>
         </div>
 
         <div className={styles.heroBody}>
           <p>
-            I build IT infrastructure that is secure by design — automated, cloud-native, and ready to scale.
+            I build and operate Linux-based infrastructure using Docker, CI/CD pipelines, monitoring, and automation. <b>Focused on reliable deployments, system administration, and secure infrastructure.</b>
           </p>
           <button
             onClick={() => {
