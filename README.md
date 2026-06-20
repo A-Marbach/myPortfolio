@@ -1,172 +1,61 @@
-# DevSecOps Portfolio – Artur Marbach
+# DevOps Portfolio – Artur Marbach
 
-A personal portfolio and documentation site built with [Docusaurus](https://docusaurus.io/) and React, showcasing DevSecOps projects, infrastructure work, and technical documentation.
+Personal portfolio showcasing Linux administration, infrastructure automation, monitoring, containerization, and CI/CD projects.
 
-**Live site:** [a-marbach.github.io/myPortfolio](https://a-marbach.github.io/myPortfolio/)
-
----
-
-## Table of Contents
-- [About](#about)
-- [Quickstart](#quickstart)
-- [Usage](#usage)
-- [Repository Structure](#repository-structure)
-- [CI/CD](#cicd)
-- [Deployment](#deployment)
-
----
+**Live Site:** https://a-marbach.github.io/myPortfolio
 
 ## About
 
-This repository contains a DevSecOps portfolio built with Docusaurus and custom React components.
+This portfolio highlights hands-on projects focused on:
 
-It demonstrates:
-- Static site generation with Docusaurus v3
-- Component-based frontend architecture with React + TypeScript
-- Project showcase section with interactive UI
-- CI/CD pipeline via GitHub Actions
-- Deployment to GitHub Pages
+* Linux Administration
+* Infrastructure Automation (Terraform & Ansible)
+* Docker & Containerization
+* CI/CD Pipelines
+* Monitoring with Prometheus & Grafana
+* Kubernetes (minikube)
 
----
+The goal of this portfolio is to demonstrate practical skills relevant to Linux Administration, IT Operations, System Administration, and Junior DevOps roles.
 
-## Quickstart
+## Featured Projects
 
-### Requirements
-- Node.js >= 18
-- npm
+### Infrastructure Automation
 
-### Install dependencies
+Provisioning and configuration of Ubuntu servers on Hetzner Cloud using Terraform and Ansible.
+
+### Monitoring Stack
+
+Prometheus and Grafana monitoring platform for infrastructure and container observability.
+
+### Book-Store API
+
+Containerized ASP.NET Core API with CI/CD pipelines, security scanning, and monitoring.
+
+### Conduit-Container
+
+Full-stack application with Docker-based deployment and automated CI/CD workflows.
+
+### Da-Bubble
+
+Containerized Angular application with Kubernetes orchestration and automated deployments.
+
+## Technologies
+
+Linux • Terraform • Ansible • Docker • GitHub Actions • Prometheus • Grafana • Kubernetes • Python
+
+## Local Development
+
 ```bash
 npm install
-```
-
-### Start development server
-```bash
 npm run start
 ```
 
-Site is available at `http://localhost:3000`
+## Build
 
-### Build for production
 ```bash
 npm run build
 ```
-
-Generates a static build in the `/build` folder.
-
----
-
-## Usage
-
-### Adding a new project
-
-Edit [src/components/myProjectHighlights/index.tsx](src/components/myProjectHighlights/index.tsx) and add a new object to the `projects` array:
-
-```ts
-{
-  img: "img/projects/example.png",
-  title: "New Project",
-  description: "Project description",
-  techIcons: ["img/container.png"],
-  github: "https://github.com/...",
-  doc: "/docs/..."
-}
-```
-
-### Adding a new documentation page
-
-Create a Markdown file inside `/docs` and reference it in `sidebars.ts`.
-
-### Adding a new blog post
-
-Create a Markdown file inside `/blog`:
-
-```md
----
-title: My New Post
-date: 2024-01-01
----
-
-Your content here...
-```
-
-### Modifying UI components
-
-All components are in `src/components/`. Each has:
-- `index.tsx` — logic and markup
-- `*.module.css` — scoped styles
-
----
-
-## Repository Structure
-
-```
-blog/                  → blog posts (Markdown)
-docs/                  → documentation pages
-src/
-  components/          → React UI components
-  pages/               → custom pages (home, imprint)
-  css/                 → global styles
-static/                → images and icons
-docusaurus.config.ts   → main configuration
-sidebars.ts            → sidebar structure
-.github/workflows/     → CI/CD pipelines
-```
-
----
-
-## CI/CD
-
-GitHub Actions handles the full pipeline on every push to `feature`:
-
-1. Install dependencies
-2. Build the site (`npm run build`)
-3. Upload build artifact
-4. Deploy to GitHub Pages
-
-Workflow files are in [.github/workflows/](.github/workflows/).
-
----
 
 ## Deployment
 
-### GitHub Pages (automatic)
-
-Push to the `feature` branch — GitHub Actions deploys automatically.
-
-### GitHub Pages (manual)
-
-```bash
-npm run build
-npm run deploy
-```
-
-### NGINX
-
-1. Build the project:
-```bash
-npm run build
-```
-
-2. Copy the `/build` folder to your server and configure NGINX:
-
-```nginx
-server {
-  listen 80;
-  server_name your-domain.com;
-
-  root /var/www/html/build;
-  index index.html;
-
-  location / {
-    try_files $uri /index.html;
-  }
-}
-```
-
----
-
-## Notes
-
-- Do not store secrets or tokens in the repository
-- Use environment variables for sensitive configuration (see `example.env`)
+The portfolio is automatically deployed to GitHub Pages using GitHub Actions.
