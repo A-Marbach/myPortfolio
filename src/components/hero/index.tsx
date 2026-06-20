@@ -14,7 +14,7 @@ export default function Hero() {
 
         <div className={styles.heroBody}>
           <p>
-            I build and operate Linux-based infrastructure using Docker, CI/CD pipelines, monitoring, and automation. <b>Focused on reliable deployments, system administration, and secure infrastructure.</b>
+            Focused on Linux systems, automation, and infrastructure.
           </p>
           <button
             onClick={() => {
