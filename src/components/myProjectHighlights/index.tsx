@@ -4,7 +4,31 @@ import styles from './my-project-highlights.module.css';
 
 export default function MyProjectHighlights() {
   const projects = [
-    
+     {
+      img: "img/terraform-logo.png",
+      title: "Infrastructure Automation",
+      description: "Provisioned and configured Ubuntu servers on Hetzner Cloud using Terraform and Ansible, including firewall configuration, user management, Nginx deployment, and infrastructure automation.",
+      techIcons: [
+        "img/yaml.png",
+        "img/shell.png",
+        "img/security.png"
+      ],
+      github: "https://github.com/A-Marbach/terraform-ansible-hetzner",
+      doc: "/myPortfolio/docs/projects/terraform-ansible-hetzner"
+    },
+     {
+      img: "img/monitoring.png",
+      title: "Monitoring Stack",
+      description: "Built a monitoring platform with Prometheus and Grafana for infrastructure and container observability, including metrics collection, dashboards, and alerting.",
+      techIcons: [
+        "img/container.png",
+        "img/shell.png",
+        "img/yaml.png",
+        "img/security.png"
+      ],
+      github: "https://github.com/A-Marbach/monitoring-stack",
+      doc: "/myPortfolio/docs/projects/monitoring-stack"
+    },
     {
       img: "img/bookstore-api.jpg",
       title: "Book-Store API",
@@ -47,33 +71,9 @@ export default function MyProjectHighlights() {
       github: "https://github.com/A-Marbach/daBubble",
       doc: "/myPortfolio/docs/projects/da-bubble"
     },
-    {
-      img: "img/truck_signs_api.png",
-      title: "Truck Signs API",
-      description: "Deployed a containerized REST API with PostgreSQL on a self-managed VM — featuring Docker networking, environment-based configuration, and automated deployment scripts.",
-      techIcons: [
-        "img/container.png",
-        "img/shell.png",
-        "img/yaml.png",
-        "img/security.png"
-      ],
-      github: "https://github.com/A-Marbach/truck_signs_api",
-      doc: "/myPortfolio/docs/projects/truck-signs-api"
-    },
    
-    {
-      img: "img/wordpress.png",
-      title: "WordPress-Blog",
-      description: "Orchestrated a multi-service WordPress + MySQL stack with Docker Compose — featuring persistent data volumes, environment-based secret management, and a single-command deployment workflow.",
-      techIcons: [
-        "img/container.png",
-        "img/yaml.png",
-        "img/shell.png",
-        "img/security.png"
-      ],
-      github: "https://github.com/A-Marbach/wordpress",
-      doc: "/myPortfolio/docs/projects/wordpress-blog"
-    },
+   
+   
     
 
   ];

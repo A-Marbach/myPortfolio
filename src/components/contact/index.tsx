@@ -13,9 +13,10 @@ export default function AddressSection() {
         <h2 className={styles.heading}>Contact me</h2>
 
         <div className={styles.contentArea}>
+          
           <ul className={styles.bulletList}>
-            <li>I am an IT Operations and DevOps Enthusiast</li>
-            <li>Interested in Linux Administration, IT Operations, Infrastructure Automation, Monitoring, and DevOps.</li>
+            <li>Junior Linux / DevOps Engineer</li>
+            <li>Hands-on experience with Linux, Docker, Terraform, Ansible, CI/CD, and Monitoring.</li>
             <li>Based in Hamburg and open to opportunities in IT Operations, Linux Administration, System Administration, and Junior DevOps.</li>
           </ul>
 
