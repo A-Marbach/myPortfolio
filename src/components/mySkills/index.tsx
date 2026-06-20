@@ -3,15 +3,15 @@ import styles from './my-skills.module.css';
 
 export default function MySkills() {
   const skills = [
-    { img: "img/docker.svg", title: "Docker", description: ["Containerizing applications", "Creating Dockerfiles", "Image management & registry"] },
-    { img: "img/cicd.svg", title: "CI/CD", description: ["Automated Build-Pipelines", "Test- and Deployment-Processes", "Integration with GitHub/GitLab"] },
-    { img: "img/shell.svg", title: "Shell Scripting", description: ["Automating system tasks", "Creating batch and cron jobs", "Optimizing system administration"] },
-    { img: "img/yaml.svg", title: "YAML", description: ["Configuring services", "Defining CI/CD pipelines", "Creating deployment templates"] },
-    { img: "img/python.svg", title: "Python", description: ["Automating processes", "Scripting for DevOps workflows", "Data analysis and tools"] },
-    { img: "img/security.svg", title: "IT-Security", description: ["Conducting security checks", "Planning penetration tests", "Best practices & compliance"] },
-    { img: "img/html.svg", title: "HTML", description: ["Creating semantic websites", "Structuring content", "Accessible layouts"] },
-    { img: "img/css.svg", title: "CSS", description: ["Designing responsive layouts", "Flexbox & Grid usage", "Animations and styling effects"] },
-    { img: "img/docusaurus.svg", title: "Docusaurus", description: ["Creating documentation websites", "Integrating Markdown content", "Theming and customizations"] },
+    { img: "img/linux.svg", title: "Linux", description: ["System administration", "User & network management", "Troubleshooting"] },
+    { img: "img/docker.svg", title: "Docker", description: ["Containerizing applications", "Building Docker images", "Docker Compose deployments"] },
+    { img: "img/terraform.svg", title: "Terraform", description: ["Infrastructure as Code", "Resource provisioning", "State management"] },
+    { img: "img/ansible.svg", title: "Ansible", description: ["Configuration management", "Playbook automation", "Server provisioning"] },
+    { img: "img/shell.svg", title: "Shell Scripting", description: ["Task automation", "Cron job management", "System administration"] },
+    { img: "img/cicd.svg", title: "CI/CD", description: ["Build pipelines", "Testing & deployment", "Github Actions integration"] },
+    { img: "img/yaml.svg", title: "YAML", description: ["Service configuration", "CI/CD pipelines", "Deployment templates"] },
+    { img: "img/github.svg", title: "GitHub Actions", description: [ "CI/CD automation", "Workflow management", "Automated deployments"] },
+    { img: "img/python.svg", title: "Python", description: ["Process automation", "DevOps Scripting", "Tool development"] },
   ];
   const [activePage, setActivePage] = useState(0);
 
