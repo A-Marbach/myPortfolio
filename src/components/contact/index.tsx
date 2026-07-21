@@ -10,14 +10,14 @@ export default function AddressSection() {
   return (
     <section id="contact" className={styles.section}>
       <div className={styles.wrapper}>
-        <h2 className={styles.heading}>Contact me</h2>
+        <h2 className={styles.heading}>Let's Connect!</h2>
 
         <div className={styles.contentArea}>
           
           <ul className={styles.bulletList}>
-            <li>Junior Linux / DevOps Engineer</li>
-            <li>Hands-on experience with Linux, Docker, Terraform, Ansible, CI/CD, and Monitoring.</li>
-            <li>Based in Hamburg and open to opportunities in IT Operations, Linux Administration, System Administration, and Junior DevOps.</li>
+            <li>Linux System Administrator</li>
+            <li>Building and operating Linux-based infrastructure with hands-on experience in Docker, Terraform, Ansible, GitHub Actions, Prometheus, and Grafana.</li>
+            <li>Open to opportunities in Linux Administration, IT Operations, System Administration, and Junior DevOps.</li>
           </ul>
 
           <div className={styles.infoBox}>
