@@ -16,7 +16,7 @@ export default function AddressSection() {
           
           <ul className={styles.bulletList}>
             <li>Linux System Administrator</li>
-            <li>Building and operating Linux-based infrastructure with hands-on experience in Docker, Terraform, Ansible, GitHub Actions, Prometheus, and Grafana.</li>
+            <li>Building and operating Linux-based infrastructure with hands-on experience in Docker, Kubernetes, Terraform, Ansible, GitHub Actions, Prometheus, and Grafana.</li>
             <li>Open to opportunities in Linux Administration, IT Operations, System Administration, and Junior DevOps.</li>
           </ul>
 

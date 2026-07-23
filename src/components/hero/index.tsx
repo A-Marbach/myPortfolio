@@ -14,7 +14,7 @@ export default function Hero() {
 
         <div className={styles.heroBody}>
           <p>
-            Linux System Administrator with hands-on experience operating Ubuntu servers, containerized applications and infrastructure automation using Docker, Terraform, Ansible and GitHub Actions.
+            Linux System Administrator with hands-on experience operating Ubuntu servers and Kubernetes clusters, automating infrastructure with Docker, Terraform, and Ansible, and monitoring with Prometheus and Grafana.
           </p>
           <button
             onClick={() => {

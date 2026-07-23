@@ -5,12 +5,12 @@ export default function MySkills() {
   const skills = [
     { img: "img/linux.svg", title: "Linux", description: ["System administration", "User & network management", "Troubleshooting"] },
     { img: "img/docker.svg", title: "Docker", description: ["Containerizing applications", "Building Docker images", "Docker Compose deployments"] },
+    { img: "img/kubernetes.svg", title: "Kubernetes", description: ["Cluster operations (k3s)", "Helm chart deployments", "Ingress & TLS automation"] },
     { img: "img/terraform.svg", title: "Terraform", description: ["Infrastructure as Code", "Resource provisioning", "State management"] },
     { img: "img/ansible.svg", title: "Ansible", description: ["Configuration management", "Playbook automation", "Server provisioning"] },
-    { img: "img/shell.svg", title: "Shell Scripting", description: ["Task automation", "Cron job management", "System administration"] },
     { img: "img/cicd.svg", title: "CI/CD", description: ["Build pipelines", "Testing & deployment", "Github Actions integration"] },
-    { img: "img/yaml.svg", title: "YAML", description: ["Service configuration", "CI/CD pipelines", "Deployment templates"] },
     { img: "img/github.svg", title: "GitHub Actions", description: [ "CI/CD automation", "Workflow management", "Automated deployments"] },
+    { img: "img/shell.svg", title: "Shell Scripting", description: ["Task automation", "Cron job management", "System administration"] },
     { img: "img/python.svg", title: "Python", description: ["Process automation", "DevOps Scripting", "Tool development"] },
   ];
   const [activePage, setActivePage] = useState(0);

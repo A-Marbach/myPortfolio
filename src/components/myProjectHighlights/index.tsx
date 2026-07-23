@@ -4,19 +4,19 @@ import styles from './my-project-highlights.module.css';
 
 export default function MyProjectHighlights() {
   const projects = [
-     {
-      img: "img/terraform-logo.png",
-      title: "Infrastructure Automation",
-      description: "Provisioned and configured Ubuntu servers on Hetzner Cloud using Terraform and Ansible, including firewall configuration, user management, Nginx deployment, and infrastructure automation.",
+    {
+      img: "img/kubernetes.svg",
+      title: "k3s Infrastructure",
+      description: "Provisioned and configured a multi-node Kubernetes (k3s) cluster on Hetzner Cloud using Terraform and Ansible, with automated HTTPS via Traefik and cert-manager, and Kubernetes-native observability using the kube-prometheus-stack Helm chart.",
       techIcons: [
-        "img/yaml.png",
-        "img/shell.png",
-        "img/security.png"
+        "img/container.png",
+        "img/security.png",
+        "img/yaml.png"
       ],
-      github: "https://github.com/A-Marbach/terraform-ansible-hetzner",
-      doc: "/myPortfolio/docs/projects/terraform-ansible-hetzner"
+      github: "https://github.com/A-Marbach/k3s-infrastructure",
+      doc: "/myPortfolio/docs/projects/k3s-infrastructure"
     },
-     {
+    {
       img: "img/monitoring.png",
       title: "Monitoring Stack",
       description: "Built a monitoring platform with Prometheus and Grafana for infrastructure and container observability, including metrics collection, dashboards, and alerting.",
@@ -57,7 +57,7 @@ export default function MyProjectHighlights() {
       github: "https://github.com/A-Marbach/conduit-container",
       doc: "/myPortfolio/docs/projects/conduit-container"
     },
-     {
+    {
       img: "img/da-bubble.png",
       imgRadius: "36px",
       title: "Da-Bubble",
@@ -71,10 +71,10 @@ export default function MyProjectHighlights() {
       github: "https://github.com/A-Marbach/daBubble",
       doc: "/myPortfolio/docs/projects/da-bubble"
     },
-   
-   
-   
-    
+
+
+
+
 
   ];
   const [isHovered, setIsHovered] = useState(false);
@@ -84,7 +84,7 @@ export default function MyProjectHighlights() {
     <section id="my-projects" className={styles.myProjectHighlights}>
       <div className={styles.wrapper}>
         <h1>My Project Highlights</h1>
-        <p className={styles.subtitle}>I build and operate Linux-based infrastructure using Docker, CI/CD pipelines, monitoring, and automation.</p>
+        <p className={styles.subtitle}>I build and operate Linux-based infrastructure using Docker, Kubernetes, CI/CD pipelines, monitoring, and automation.</p>
 
         {/* Desktop */}
         <div className={styles.projectsContainer}>
