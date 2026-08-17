@@ -5,7 +5,20 @@ import styles from './my-project-highlights.module.css';
 export default function MyProjectHighlights() {
   const projects = [
     {
-      img: "img/kubernetes.svg",
+      img: "img/aws-img.png",
+      title: "Conduit AWS Infrastructure",
+      description: "Built AWS infrastructure with Terraform, including VPC, IAM, security groups, and EC2. Automated Ubuntu configuration with Ansible, deployed the application with Docker, and added GitHub Actions and CloudWatch monitoring.",
+      techIcons: [
+        "img/container.png",
+        "img/yaml.png",
+        "img/security.png",
+        "img/cicd.png"
+      ],
+      github: "https://github.com/A-Marbach/conduit-aws",
+      doc: "/myPortfolio/docs/projects/conduit-aws"
+    },
+    {
+      img: "img/k3s-img.png",
       title: "k3s Infrastructure",
       description: "Provisioned and configured a multi-node Kubernetes (k3s) cluster on Hetzner Cloud using Terraform and Ansible, with automated HTTPS via Traefik and cert-manager, and Kubernetes-native observability using the kube-prometheus-stack Helm chart.",
       techIcons: [
@@ -17,7 +30,7 @@ export default function MyProjectHighlights() {
       doc: "/myPortfolio/docs/projects/k3s-infrastructure"
     },
     {
-      img: "img/monitoring.png",
+      img: "img/monitoring-stack-img.png",
       title: "Monitoring Stack",
       description: "Built a monitoring platform with Prometheus and Grafana for infrastructure and container observability, including metrics collection, dashboards, and alerting.",
       techIcons: [
@@ -30,7 +43,7 @@ export default function MyProjectHighlights() {
       doc: "/myPortfolio/docs/projects/monitoring-stack"
     },
     {
-      img: "img/bookstore-api.jpg",
+      img: "img/bookstore-img.png",
       title: "Book-Store API",
       description: "Built a containerized ASP.NET Core 8 REST API with MongoDB — featuring a multi-stage Dockerfile, automated CI/CD pipeline with Hadolint, Trivy and Gitleaks security scanning, and live monitoring via Prometheus and Grafana on a Hetzner VM.",
       techIcons: [
@@ -43,7 +56,7 @@ export default function MyProjectHighlights() {
       doc: "/myPortfolio/docs/projects/bookstore-api"
     },
     {
-      img: "img/conduit.png",
+      img: "img/conduit-img.png",
       title: "Conduit-Container",
       description:
         "Containerized a full-stack Django + Angular application, built automated CI/CD pipelines for zero-touch deployments, and enforced infrastructure stability through scripted configuration management.",
@@ -57,20 +70,7 @@ export default function MyProjectHighlights() {
       github: "https://github.com/A-Marbach/conduit-container",
       doc: "/myPortfolio/docs/projects/conduit-container"
     },
-    {
-      img: "img/da-bubble.png",
-      imgRadius: "36px",
-      title: "Da-Bubble",
-      description: "Containerized an Angular chat application and deployed it via a fully automated CI/CD pipeline — including Docker builds, GHCR image registry, CodeQL security scanning, SSH-based VM deployment, and Kubernetes orchestration with minikube.",
-      techIcons: [
-        "img/container.png",
-        "img/yaml.png",
-        "img/security.png",
-        "img/cicd.png"
-      ],
-      github: "https://github.com/A-Marbach/daBubble",
-      doc: "/myPortfolio/docs/projects/da-bubble"
-    },
+
 
 
 
@@ -84,7 +84,7 @@ export default function MyProjectHighlights() {
     <section id="my-projects" className={styles.myProjectHighlights}>
       <div className={styles.wrapper}>
         <h1>My Project Highlights</h1>
-        <p className={styles.subtitle}>I build and operate Linux-based infrastructure using Docker, Kubernetes, CI/CD pipelines, monitoring, and automation.</p>
+        <p className={styles.subtitle}>I build and operate Linux and cloud infrastructure using AWS, Docker, Kubernetes, CI/CD pipelines, monitoring, and automation.</p>
 
         {/* Desktop */}
         <div className={styles.projectsContainer}>
@@ -122,7 +122,7 @@ export default function MyProjectHighlights() {
               <div className={styles.leftColumn}>
                 <h2 className={styles.projectTitle}>{projects[activeIndex].title}</h2>
 
-                <img src={projects[activeIndex].img} alt={projects[activeIndex].title} className={styles.projectImage} style={projects[activeIndex].imgRadius ? { borderRadius: projects[activeIndex].imgRadius } : {}} />
+                <img src={projects[activeIndex].img} alt={projects[activeIndex].title} className={styles.projectImage} />
               </div>
               <div className={styles.rightColumn}>
                 {projects[activeIndex].techIcons.length > 0 && (
@@ -154,7 +154,7 @@ export default function MyProjectHighlights() {
                   ))}
                 </div>
               )}
-              <img src={project.img} alt={project.title} className={styles.respImage} style={project.imgRadius ? { borderRadius: project.imgRadius } : {}} />
+              <img src={project.img} alt={project.title} className={styles.respImage}  />
               <p className={styles.respDescription}>{project.description}</p>
               <div className={styles.respButtons}>
                 <a href={project.doc} target="_blank" rel="noreferrer">
