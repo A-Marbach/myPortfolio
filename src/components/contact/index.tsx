@@ -5,7 +5,6 @@ import styles from "./contact.module.css";
 
 export default function AddressSection() {
   const [hoverMail, setHoverMail] = useState(false);
-  const [hoverLinkedIn, setHoverLinkedIn] = useState(false);
 
   return (
     <section id="contact" className={styles.section}>
@@ -36,23 +35,7 @@ export default function AddressSection() {
             </div>
 
 
-            <div className={styles.infoRow}>
-              <img
-                src={hoverLinkedIn ? "img/linkin-hover.png" : "img/linkin.png"}
-                alt="linkedin"
-                onMouseEnter={() => setHoverLinkedIn(true)}
-                onMouseLeave={() => setHoverLinkedIn(false)}
-                className={styles.iconImg}
-              />
-              <a
-                className={styles.link}
-                href="https://www.linkedin.com/in/artur-marbach/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Profile Page
-              </a>
-            </div>
+          
           </div>
         </div>
       </div>
