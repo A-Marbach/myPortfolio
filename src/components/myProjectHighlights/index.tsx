@@ -4,73 +4,79 @@ import styles from './my-project-highlights.module.css';
 
 export default function MyProjectHighlights() {
   const projects = [
-    {
-      img: "img/linux-server-automation.png",
-      title: "Linux Server Automation",
-      description:
-        "Provisioned an Ubuntu 24.04 server with Terraform and configured it with Ansible. Implemented user management, SSH hardening, firewall rules, NGINX and Fail2Ban.",
-      techIcons: [
-        "img/yaml.png",
-        "img/security.png",
-      ],
-      github: "https://github.com/A-Marbach/terraform-ansible-hetzner",
-      doc: "/myPortfolio/docs/projects/terraform-ansible-hetzner"
-    },
-      {
-      img: "img/monitoring-stack-img.png",
-      title: "Monitoring Stack",
-      description: "Built a monitoring platform with Prometheus and Grafana for infrastructure and container observability, including metrics collection, dashboards, and alerting.",
-      techIcons: [
-        "img/container.png",
-        "img/shell.png",
-        "img/yaml.png",
-      ],
-      github: "https://github.com/A-Marbach/monitoring-stack",
-      doc: "/myPortfolio/docs/projects/monitoring-stack"
-    },
-    {
-      img: "img/aws-img.png",
-      title: "Conduit AWS Infrastructure",
-      description: "Built AWS infrastructure with Terraform, including VPC, IAM, security groups, and EC2. Automated Ubuntu configuration with Ansible, deployed the application with Docker, and added GitHub Actions and CloudWatch monitoring.",
-      techIcons: [
-        "img/container.png",
-        "img/yaml.png",
-        "img/security.png",
-        "img/cicd.png"
-      ],
-      github: "https://github.com/A-Marbach/conduit-aws",
-      doc: "/myPortfolio/docs/projects/conduit-aws"
-    },
-    {
-      img: "img/bookstore-img.png",
-      title: "Book-Store API",
-      description: "Built a containerized ASP.NET Core 8 REST API with MongoDB — featuring a multi-stage Dockerfile, automated CI/CD pipeline with Hadolint, Trivy and Gitleaks security scanning, and live monitoring via Prometheus and Grafana on a Hetzner VM.",
-      techIcons: [
-        "img/container.png",
-        "img/shell.png",
-        "img/cicd.png",
-        "img/yaml.png",
-        "img/security.png"],
-      github: "https://github.com/A-Marbach/bookStoreAPI",
-      doc: "/myPortfolio/docs/projects/bookstore-api"
-    },
-  
+  {
+    img: "img/aws-vikunja.png",
+    title: "Vikunja on AWS ECS Fargate",
+    description:
+      "Built an AWS environment with Terraform using ECS Fargate, RDS PostgreSQL, S3, Secrets Manager, CloudWatch and SNS. Tested service recovery, persistent storage and database backup and recovery.",
+    techIcons: [
+      "img/container.png",
+      "img/cicd.png",
+      "img/security.png",
+      "img/yaml.png"
+    ],
+    github: "https://github.com/A-Marbach/vikunja-aws-fargate",
+    doc: "/myPortfolio/docs/projects/vikunja-aws-fargate"
+  },
 
-    {
-      img: "img/k3s-img.png",
-      title: "k3s Infrastructure",
-      description: "Provisioned and configured a multi-node Kubernetes (k3s) cluster on Hetzner Cloud using Terraform and Ansible, with automated HTTPS via Traefik and cert-manager, and Kubernetes-native observability using the kube-prometheus-stack Helm chart.",
-      techIcons: [
-        "img/container.png",
-        "img/security.png",
-        "img/yaml.png"
-      ],
-      github: "https://github.com/A-Marbach/k3s-infrastructure",
-      doc: "/myPortfolio/docs/projects/k3s-infrastructure"
-    },
+  {
+    img: "img/aws-img.png",
+    title: "Conduit AWS Infrastructure",
+    description:
+      "Provisioned AWS infrastructure with Terraform including VPC, IAM, security groups and EC2. Automated Ubuntu configuration with Ansible, deployed the application with Docker and added GitHub Actions and CloudWatch monitoring.",
+    techIcons: [
+      "img/container.png",
+      "img/yaml.png",
+      "img/security.png",
+      "img/cicd.png"
+    ],
+    github: "https://github.com/A-Marbach/conduit-aws",
+    doc: "/myPortfolio/docs/projects/conduit-aws"
+  },
 
+  {
+    img: "img/k3s-img.png",
+    title: "k3s Infrastructure",
+    description:
+      "Built a multi-node Kubernetes cluster on Hetzner Cloud using Terraform and Ansible. Configured Traefik, cert-manager, Helm deployments and Kubernetes observability with Prometheus and Grafana.",
+    techIcons: [
+      "img/container.png",
+      "img/security.png",
+      "img/yaml.png"
+    ],
+    github: "https://github.com/A-Marbach/k3s-infrastructure",
+    doc: "/myPortfolio/docs/projects/k3s-infrastructure"
+  },
 
-  ];
+  {
+    img: "img/bookstore-img.png",
+    title: "BookStore DevSecOps Pipeline",
+    description:
+      "Containerized an ASP.NET Core REST API with MongoDB and implemented CI/CD with GitHub Actions. Integrated Hadolint, Trivy and Gitleaks security scanning and monitored the deployment with Prometheus and Grafana.",
+    techIcons: [
+      "img/container.png",
+      "img/shell.png",
+      "img/cicd.png",
+      "img/yaml.png",
+      "img/security.png"
+    ],
+    github: "https://github.com/A-Marbach/bookStoreAPI",
+    doc: "/myPortfolio/docs/projects/bookstore-api"
+  },
+
+  {
+    img: "img/linux-server-automation.png",
+    title: "Linux Server Automation",
+    description:
+      "Provisioned an Ubuntu 24.04 server with Terraform and automated configuration with Ansible, including user management, SSH hardening, firewall rules, NGINX and Fail2Ban.",
+    techIcons: [
+      "img/yaml.png",
+      "img/security.png"
+    ],
+    github: "https://github.com/A-Marbach/terraform-ansible-hetzner",
+    doc: "/myPortfolio/docs/projects/terraform-ansible-hetzner"
+  }
+];
   const [isHovered, setIsHovered] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -79,7 +85,7 @@ export default function MyProjectHighlights() {
       <div className={styles.wrapper}>
         <h1>My Project Highlights</h1>
         <p className={styles.subtitle}>
-          I build and operate Linux infrastructure with a focus on server administration, automation, monitoring and cloud environments.
+         My projects focus on cloud infrastructure, automation, CI/CD and monitoring with Terraform, Ansible, Docker, AWS and Kubernetes.
         </p>
 
         {/* Desktop */}

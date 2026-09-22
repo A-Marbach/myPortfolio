@@ -9,13 +9,13 @@ export default function Hero() {
           <div className={styles.heroIntro}>
             <h1>Hey there, I am</h1>
             <h2>Artur Marbach</h2>
-            <h3>Linux Administration | IT Operations </h3>
+            <h3>Junior DevOps Engineer | Linux & Cloud Infrastructure</h3>
           </div>
 
           <div className={styles.heroBody}>
             <p>
-           Linux server administration, troubleshooting and automation
-           with Ansible, Terraform, Prometheus and Grafana.
+              Building and automating cloud infrastructure with Linux, Docker, Terraform, Ansible, AWS and CI/CD.
+              Focused on Infrastructure as Code, containerized deployments, monitoring and reliable operations.
             </p>
             <button
               onClick={() => {
@@ -37,10 +37,10 @@ export default function Hero() {
           />
         </div>
         <div className={styles.heroBodyMobile}>
-       <p>
-  Linux server administration, troubleshooting and automation
-  with Ansible, Terraform, Prometheus and Grafana.
-</p>
+          <p>
+            Building and automating cloud infrastructure with Linux, Docker, Terraform, Ansible, AWS and CI/CD.
+            Focused on Infrastructure as Code, containerized deployments, monitoring and reliable operations.
+          </p>
           <button
             onClick={() => {
               document.getElementById("contact")?.scrollIntoView({

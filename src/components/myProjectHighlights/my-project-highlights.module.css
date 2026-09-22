@@ -251,7 +251,12 @@
   }
 
   .subtitle {
-    display: none;
+    display: block;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0 0 24px;
+    color: #e5e7eb;
+  
   }
 
   .projectsContainer {

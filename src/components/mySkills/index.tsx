@@ -2,17 +2,17 @@ import React, { useState, useEffect, useRef } from "react";
 import styles from './my-skills.module.css';
 
 export default function MySkills() {
-const skills = [
-  { img: "img/linux.svg", title: "Linux", description: ["System administration", "User & permission management", "SSH, systemd & troubleshooting"] },
-  { img: "img/ansible.svg", title: "Ansible", description: ["Configuration management", "Playbook automation", "Server provisioning"] },
-  { img: "img/terraform.svg", title: "Terraform", description: ["Infrastructure as Code", "Resource provisioning", "State management"] },
-  { img: "img/docker.svg", title: "Docker", description: ["Containerizing applications", "Building Docker images", "Docker Compose deployments"] },
-  { img: "img/grafana.svg", title: "Monitoring", description: ["Prometheus & Grafana", "Metrics visualization", "Alerting"] },
-  { img: "img/aws.svg", title: "AWS", description: ["Cloud infrastructure", "EC2 & networking", "IAM & CloudWatch"] },
-  { img: "img/github.svg", title: "Git / GitHub", description: ["Version control", "Repository management", "Collaborative workflows"] },
-  { img: "img/cicd.svg", title: "CI/CD", description: ["Build & test pipelines", "GitHub Actions", "Automated deployments"] },
-  { img: "img/kubernetes.svg", title: "Kubernetes", description: ["Cluster operations (k3s)", "Helm deployments", "Ingress & TLS"] },
-];
+  const skills = [
+    { img: "img/linux.svg", title: "Linux", description: ["Ubuntu server administration", "SSH, systemd & troubleshooting", "Users, permissions & networking"] },
+    { img: "img/terraform.svg", title: "Terraform", description: ["Infrastructure as Code", "Cloud resource provisioning", "State management"] },
+    { img: "img/ansible.svg", title: "Ansible", description: ["Configuration management", "Automated server provisioning", "Playbook automation"] },
+    { img: "img/aws.svg", title: "AWS", description: ["EC2, VPC & networking", "IAM & Security Groups", "CloudWatch & monitoring"] },
+    { img: "img/docker.svg", title: "Docker", description: ["Containerizing applications", "Docker Compose deployments", "Image builds & registries"] },
+    { img: "img/cicd.svg", title: "Git & CI/CD", description: ["Git & GitHub", "GitHub Actions", "Build & deployment pipelines"] },
+    { img: "img/kubernetes.svg", title: "Kubernetes", description: ["k3s cluster operations", "Helm deployments", "Ingress & TLS"] },
+    { img: "img/grafana.svg", title: "Monitoring", description: ["Prometheus & Grafana", "Metrics & dashboards", "Alerting & observability"] },
+    { img: "img/python.svg", title: "Bash / Python", description: ["Shell scripting", "Python fundamentals", "Automation scripting"] },
+  ];
   const [activePage, setActivePage] = useState(0);
 
 
@@ -117,7 +117,10 @@ const skills = [
                   {skills.slice(pageIndex * 3, pageIndex * 3 + 3).map((skill, idx) => (
                     <div key={idx} className={styles.skillCardMobile}>
                       <img src={skill.img} alt={skill.title} />
-                      <div>
+
+                      <div className={styles.skillText}>
+                        <h3 className={styles.skillTitle}>{skill.title}</h3>
+
                         <ul>
                           {skill.description.map((line, i) => (
                             <li key={i}>{line}</li>
